@@ -1,0 +1,43 @@
+---
+title: "This is Project 1"
+date: 2021-04-09T10:58:08-04:00
+description: "Project 1: a test markdown"
+featured_image: "/images/Pope-Edouard-de-Beaumont-1844.jpg"
+tags: ["data"]
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+```
+
+_This is a test_
+
+
+## GitHub Documents
+
+This is an R Markdown format used for publishing markdown documents to GitHub. When you click the **Knit** button all R code chunks are run and a markdown file (.md) suitable for publishing to GitHub is generated.
+
+## Including Code
+
+You can include R code in the document as follows:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+test_plot <- plot(pressure)
+
+ggsave("../../../static/images/test.png", plot = test_plot, width = 8, height = 5)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+#{{< figure src="/images/test.png" title="test" >}}

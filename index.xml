@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tomás Maher on Tomas Maher</title>
+    <link>https://example.com/</link>
+    <description>Recent content in Tomás Maher on Tomas Maher</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 17 Jun 2021 10:58:08 -0400</lastBuildDate><atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Project 3: Masters Thesis</title>
+      <link>https://example.com/post/project_3_thesis/</link>
+      <pubDate>Thu, 17 Jun 2021 10:58:08 -0400</pubDate>
+      
+      <guid>https://example.com/post/project_3_thesis/</guid>
+      <description>I chose to do my thesis on the topic of Cybersecurity. I was interested to see how Neutral countries were responding to the ever rising threat of a Cyberwar. I used Text Analysis Methods to compare the manifestos of political parties in several countries to understand if this was an issue that was being prioritised.
+At a high level this involved:
+ Generating a cybersecurity dictionary to identify statements regarding this topic in different manifestos Translating this dictionary into 10 other languages and using this to extract relevant statements from manifestos Individually translating and categorising over 2,500 statements in 11 languages Locate supporting data on items such as military spending, political alignment, and election wins.</description>
+    </item>
+    
+    <item>
+      <title>Project 2: NATO Speeches - Presentation</title>
+      <link>https://example.com/post/project_2_nato_speeches-presentation/</link>
+      <pubDate>Sun, 30 May 2021 10:58:08 -0400</pubDate>
+      
+      <guid>https://example.com/post/project_2_nato_speeches-presentation/</guid>
+      <description>As part of the NATO Speeches Quantitative Text Analysis project I had the opportunity to present my progress mid-way through the semester. Below I outline the PowerPoint slides I used and talk through some changes I would make if I was doing it again.
+I used the following title slide to introduce the topic and explain how I was going to approach the presentation
+ Title Slide   The next slide in the deck introduced the topic of cybersecurity and allowed me to talk about the importance of the topic while also showing how NATO has started to prioritise it.</description>
+    </item>
+    
+    <item>
+      <title>Project 2: NATO Speeches: Code</title>
+      <link>https://example.com/post/project_2_nato_speeches-code/</link>
+      <pubDate>Sun, 30 May 2021 10:58:08 -0400</pubDate>
+      
+      <guid>https://example.com/post/project_2_nato_speeches-code/</guid>
+      <description>This was a project I did for during my masters for my Quantitative Text Analysis class. It was completed entirely using R. The following steps were involved:
+ Scraping over 1,000 speeches from the official NATO website using the rvest package Cleaning the data and preparing it for analysis using stringr and quanteda Generating a topic model using the stm package Validating the model against a dictionary based method Plotting the data based on a 28-speech sliding window Exploring the data and drawing conclusions based on this  I have included the code used to analyse the data below.</description>
+    </item>
+    
+    <item>
+      <title>Project 1: Regression Analysis - Code</title>
+      <link>https://example.com/post/project_1_regression-code/</link>
+      <pubDate>Wed, 23 Dec 2020 10:58:08 -0400</pubDate>
+      
+      <guid>https://example.com/post/project_1_regression-code/</guid>
+      <description>Approach This was the first coding project I completed at University. In hindsight there are many changes I would make (which I will outline below in the coming weeks) but it was a really interesting project and was my first time using regression on real-world data.
+Some of the steps involved include:
+ Obtaining information regarding emissions from an EPI dataset Obtaining information regarding Green Parties from the Parlgov dataset Obtaining information regarding countries demographics from the World Bank&amp;rsquo;s datasets Merging these datasets together and calculating relevant variables Generating a number of plots to help identify outliers and trends Creating a linear regression model to test my hypothesis  I have pasted the code I used below but I will update it to include the outputs of the ggplot commands in the coming weeks.</description>
+    </item>
+    
+  </channel>
+</rss>

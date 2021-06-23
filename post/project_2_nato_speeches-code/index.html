@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Project 2: NATO Speeches: Code | Tomas Maher</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="Analysing the Topics Discussed in NATO Speeches using Quantitative Text Analysis">
+    <meta name="generator" content="Hugo 0.83.1" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="Project 2: NATO Speeches: Code" />
+<meta property="og:description" content="Analysing the Topics Discussed in NATO Speeches using Quantitative Text Analysis" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://example.com/post/project_2_nato_speeches-code/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-05-30T10:58:08-04:00" />
+<meta property="article:modified_time" content="2021-05-30T10:58:08-04:00" /><meta property="og:site_name" content="Tomas Maher" />
+
+<meta itemprop="name" content="Project 2: NATO Speeches: Code">
+<meta itemprop="description" content="Analysing the Topics Discussed in NATO Speeches using Quantitative Text Analysis"><meta itemprop="datePublished" content="2021-05-30T10:58:08-04:00" />
+<meta itemprop="dateModified" content="2021-05-30T10:58:08-04:00" />
+<meta itemprop="wordCount" content="3272">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Project 2: NATO Speeches: Code"/>
+<meta name="twitter:description" content="Analysing the Topics Discussed in NATO Speeches using Quantitative Text Analysis"/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  
+  
+  <header class="cover bg-top" style="background-image: url('https://example.com/images/NATO_Images/NATO.jpg');">
+    <div class="pb3-m pb6-l bg-black-60">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        Tomas Maher
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/about/" title="About Me page">
+              About Me
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/post/" title="Projects page">
+              Projects
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+
+
+
+
+
+
+
+<a href="https://linkedin.com/in/tomasmaher" target="_blank" class="link-transition linkedin link dib z-999 pt3 pt0-l mr1" title="LinkedIn link" rel="noopener" aria-label="follow on LinkedIn——Opens in a new window">
+  <svg  height="32px"  style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000" width="8px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+</span></a>
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+      <div class="tc-l pv6 ph3 ph4-ns">
+        
+          <h1 class="f2 f1-l fw2 white-90 mb0 lh-title">Project 2: NATO Speeches: Code</h1>
+          
+            <h2 class="fw1 f5 f3-l white-80 measure-wide-l center lh-copy mt3 mb4">
+              Analysing the Topics Discussed in NATO Speeches using Quantitative Text Analysis
+            </h2>
+          
+        
+      </div>
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        PROJECTS
+      </aside>
+      
+
+
+
+
+  <div id="sharing" class="mt3">
+
+    
+    <a href="https://www.facebook.com/sharer.php?u=https://example.com/post/project_2_nato_speeches-code/" class="facebook no-underline" aria-label="share on Facebook">
+      <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M28.765,50.32h6.744V33.998h4.499l0.596-5.624h-5.095  l0.007-2.816c0-1.466,0.14-2.253,2.244-2.253h2.812V17.68h-4.5c-5.405,0-7.307,2.729-7.307,7.317v3.377h-3.369v5.625h3.369V50.32z   M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
+
+    </a>
+
+    
+    
+    <a href="https://twitter.com/share?url=https://example.com/post/project_2_nato_speeches-code/&amp;text=Project%202:%20NATO%20Speeches:%20Code" class="twitter no-underline" aria-label="share on Twitter">
+      <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/></svg>
+
+    </a>
+
+    
+    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://example.com/post/project_2_nato_speeches-code/&amp;title=Project%202:%20NATO%20Speeches:%20Code" class="linkedin no-underline" aria-label="share on LinkedIn">
+      <svg  height="32px"  style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+
+    </a>
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">Project 2: NATO Speeches: Code</h1>
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2021-05-30T10:58:08-04:00">May 30, 2021</time>
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><p>This was a project I did for during my masters for my Quantitative Text Analysis class. It was completed entirely using R. The following steps were involved:</p>
+<ul>
+<li>Scraping over 1,000 speeches from the official NATO website using the rvest package</li>
+<li>Cleaning the data and preparing it for analysis using stringr and quanteda</li>
+<li>Generating a topic model using the stm package</li>
+<li>Validating the model against a dictionary based method</li>
+<li>Plotting the data based on a 28-speech sliding window</li>
+<li>Exploring the data and drawing conclusions based on this</li>
+</ul>
+<p>I have included the code used to analyse the data below. This will be updated in the coming weeks to include the code used to scrape the data from the NATO website. I will also format parts of the code and reformat the images to better suit the style of the website. Finally, I will add more detail surrounding the approach, the results and my conclusions.</p>
+<h1 id="project_1_nato_speeches">Project_1_NATO_Speeches</h1>
+<p>Load Libraries</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">library</span>(foreign)
+<span style="color:#a6e22e">library</span>(tidyverse)
+<span style="color:#a6e22e">library</span>(stringr)
+<span style="color:#a6e22e">library</span>(quanteda)
+<span style="color:#a6e22e">library</span>(stm)
+<span style="color:#a6e22e">library</span>(quanteda.textmodels)
+<span style="color:#a6e22e">library</span>(quanteda.textstats)
+<span style="color:#a6e22e">library</span>(slider)
+<span style="color:#a6e22e">library</span>(lubridate)
+</code></pre></div><p>Import dataset</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#75715e">#Read in Speeches</span>
+speeches <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">read.csv</span>(file <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;NATO_Speeches.csv&#34;</span>,
+                     header <span style="color:#f92672">=</span> <span style="color:#66d9ef">TRUE</span>,
+                     stringsAsFactors <span style="color:#f92672">=</span> <span style="color:#66d9ef">FALSE</span>,
+                     sep <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;,&#34;</span>,
+                     encoding <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;UTF-8&#34;</span>
+                     )
+
+<span style="color:#a6e22e">names</span>(speeches)[4] <span style="color:#f92672">&lt;-</span> <span style="color:#e6db74">&#34;text&#34;</span>
+
+<span style="color:#75715e">#Convert to ASCII to remove incorrect symbols</span>
+speeches<span style="color:#f92672">$</span>text <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">iconv</span>(speeches<span style="color:#f92672">$</span>text, <span style="color:#e6db74">&#34;latin1&#34;</span>, <span style="color:#e6db74">&#34;ASCII&#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>)
+
+<span style="color:#75715e">#Format data</span>
+speeches <span style="color:#f92672">&lt;-</span> speeches <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">mutate</span>(date <span style="color:#f92672">=</span> <span style="color:#a6e22e">as.Date</span>(dates, format <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;%d %b. %Y&#34;</span>)) <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">select</span>(<span style="color:#f92672">-</span>dates) <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">arrange</span>(date) <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">mutate</span>(speech_num <span style="color:#f92672">=</span> <span style="color:#a6e22e">row_number</span>()) <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">mutate</span>(month <span style="color:#f92672">=</span> <span style="color:#a6e22e">format</span>(date, <span style="color:#e6db74">&#34;%m&#34;</span>)) <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">mutate</span>(year <span style="color:#f92672">=</span> <span style="color:#a6e22e">format</span>(date, <span style="color:#e6db74">&#34;%y&#34;</span>))
+</code></pre></div><p>Clean the data</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#75715e">#remove p-tags</span>
+speeches<span style="color:#f92672">$</span>text <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">str_replace_all</span>(speeches<span style="color:#f92672">$</span>text, <span style="color:#e6db74">&#34;&lt;.*?&gt;&#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>)
+
+<span style="color:#75715e">#remove header and footer</span>
+speeches<span style="color:#f92672">$</span>text <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">str_replace_all</span>(speeches<span style="color:#f92672">$</span>text, <span style="color:#e6db74">&#34;As delivered&#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>)
+speeches<span style="color:#f92672">$</span>text <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">str_replace_all</span>(speeches<span style="color:#f92672">$</span>text, <span style="color:#e6db74">&#34;download mp3&#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>)
+speeches<span style="color:#f92672">$</span>text <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">str_replace_all</span>(speeches<span style="color:#f92672">$</span>text, <span style="color:#e6db74">&#34;You must provide an address This is not a valid e-mail address! Something went wrong sending the address&#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>)
+
+<span style="color:#75715e">#Remove remaining symbols</span>
+speeches<span style="color:#f92672">$</span>text <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">str_replace_all</span>(speeches<span style="color:#f92672">$</span>text, <span style="color:#e6db74">&#34;\n&#34;</span>, <span style="color:#e6db74">&#34; &#34;</span>)
+speeches<span style="color:#f92672">$</span>text <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">str_replace_all</span>(speeches<span style="color:#f92672">$</span>text, <span style="color:#e6db74">&#34;|&#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>)
+speeches<span style="color:#f92672">$</span>text <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">str_replace_all</span>(speeches<span style="color:#f92672">$</span>text, <span style="color:#e6db74">&#34;\\|&#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>)
+speeches<span style="color:#f92672">$</span>text <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">str_replace_all</span>(speeches<span style="color:#f92672">$</span>text, <span style="color:#e6db74">&#34;¦&#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>)
+speeches<span style="color:#f92672">$</span>text <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">str_replace_all</span>(speeches<span style="color:#f92672">$</span>text, <span style="color:#e6db74">&#34;“&#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>)
+
+<span style="color:#75715e">#Remove non-useful words</span>
+speeches<span style="color:#f92672">$</span>text <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">str_to_lower</span>(speeches<span style="color:#f92672">$</span>text)
+speeches<span style="color:#f92672">$</span>text <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">str_replace_all</span>(speeches<span style="color:#f92672">$</span>text, <span style="color:#e6db74">&#34;jens&#34;</span>, <span style="color:#e6db74">&#34; &#34;</span>)
+speeches<span style="color:#f92672">$</span>text <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">str_replace_all</span>(speeches<span style="color:#f92672">$</span>text, <span style="color:#e6db74">&#34;stoltenberg&#34;</span>, <span style="color:#e6db74">&#34; &#34;</span>)
+speeches<span style="color:#f92672">$</span>text <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">str_replace_all</span>(speeches<span style="color:#f92672">$</span>text, <span style="color:#e6db74">&#34;geoană&#34;</span>, <span style="color:#e6db74">&#34; &#34;</span>)
+speeches<span style="color:#f92672">$</span>text <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">str_replace_all</span>(speeches<span style="color:#f92672">$</span>text, <span style="color:#e6db74">&#34;oana&#34;</span>, <span style="color:#e6db74">&#34; &#34;</span>)
+speeches<span style="color:#f92672">$</span>text <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">str_replace_all</span>(speeches<span style="color:#f92672">$</span>text, <span style="color:#e6db74">&#34;lungescu&#34;</span>, <span style="color:#e6db74">&#34; &#34;</span>)
+speeches<span style="color:#f92672">$</span>text <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">str_replace_all</span>(speeches<span style="color:#f92672">$</span>text, <span style="color:#e6db74">&#34;gottemoeller&#34;</span>, <span style="color:#e6db74">&#34; &#34;</span>)
+speeches<span style="color:#f92672">$</span>text <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">str_replace_all</span>(speeches<span style="color:#f92672">$</span>text, <span style="color:#e6db74">&#34;vershbow&#34;</span>, <span style="color:#e6db74">&#34; &#34;</span>)
+speeches<span style="color:#f92672">$</span>text <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">str_replace_all</span>(speeches<span style="color:#f92672">$</span>text, <span style="color:#e6db74">&#34;q:&#34;</span>, <span style="color:#e6db74">&#34; &#34;</span>)
+speeches<span style="color:#f92672">$</span>text <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">str_replace_all</span>(speeches<span style="color:#f92672">$</span>text, <span style="color:#e6db74">&#34;nato&#34;</span>, <span style="color:#e6db74">&#34; &#34;</span>)
+speeches<span style="color:#f92672">$</span>text <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">str_replace_all</span>(speeches<span style="color:#f92672">$</span>text, <span style="color:#e6db74">&#34;secretary general&#34;</span>, <span style="color:#e6db74">&#34; &#34;</span>)
+speeches<span style="color:#f92672">$</span>text <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">str_replace_all</span>(speeches<span style="color:#f92672">$</span>text, <span style="color:#e6db74">&#34;deputy&#34;</span>, <span style="color:#e6db74">&#34; &#34;</span>)
+
+<span style="color:#75715e">#Remove unnecessary words:</span>
+speeches<span style="color:#f92672">$</span>text <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">str_replace_all</span>(speeches<span style="color:#f92672">$</span>text, <span style="color:#e6db74">&#34;also&#34;</span>, <span style="color:#e6db74">&#34; &#34;</span>)
+speeches<span style="color:#f92672">$</span>text <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">str_replace_all</span>(speeches<span style="color:#f92672">$</span>text, <span style="color:#e6db74">&#34;thank you&#34;</span>, <span style="color:#e6db74">&#34; &#34;</span>)
+speeches<span style="color:#f92672">$</span>text <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">str_replace_all</span>(speeches<span style="color:#f92672">$</span>text, <span style="color:#e6db74">&#34; can &#34;</span>, <span style="color:#e6db74">&#34; &#34;</span>)
+speeches<span style="color:#f92672">$</span>text <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">str_replace_all</span>(speeches<span style="color:#f92672">$</span>text, <span style="color:#e6db74">&#34; s &#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>)
+speeches<span style="color:#f92672">$</span>text <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">str_replace_all</span>(speeches<span style="color:#f92672">$</span>text, <span style="color:#e6db74">&#34; \\&#39;s &#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>)
+speeches<span style="color:#f92672">$</span>text <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">str_replace_all</span>(speeches<span style="color:#f92672">$</span>text, <span style="color:#e6db74">&#34;\\-&#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>)
+speeches<span style="color:#f92672">$</span>text <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">str_replace_all</span>(speeches<span style="color:#f92672">$</span>text, <span style="color:#e6db74">&#34;u\\.s&#34;</span>, <span style="color:#e6db74">&#34;us&#34;</span>)
+speeches<span style="color:#f92672">$</span>text <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">str_replace_all</span>(speeches<span style="color:#f92672">$</span>text, <span style="color:#e6db74">&#34;critical infrastructure&#34;</span>, <span style="color:#e6db74">&#34;cni&#34;</span>)
+speeches<span style="color:#f92672">$</span>text <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">str_replace_all</span>(speeches<span style="color:#f92672">$</span>text, <span style="color:#e6db74">&#34;critical national infrastructure&#34;</span>, <span style="color:#e6db74">&#34;cni&#34;</span>)
+
+<span style="color:#75715e">#remove anything that&#39;s in square brackets</span>
+speeches<span style="color:#f92672">$</span>text <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">str_replace_all</span>(speeches<span style="color:#f92672">$</span>text,<span style="color:#e6db74">&#34;\\[[^[]]]*]&#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>)
+
+<span style="color:#75715e">#Further cleaning</span>
+speeches<span style="color:#f92672">$</span>text <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">str_replace_all</span>(speeches<span style="color:#f92672">$</span>text,<span style="color:#e6db74">&#34;\\*&#34;</span>, <span style="color:#e6db74">&#34; &#34;</span>)
+speeches<span style="color:#f92672">$</span>text <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">str_replace_all</span>(speeches<span style="color:#f92672">$</span>text,<span style="color:#e6db74">&#34;\\#tj&#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>)
+speeches<span style="color:#f92672">$</span>text <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">str_replace_all</span>(speeches<span style="color:#f92672">$</span>text, <span style="color:#e6db74">&#34;e\\.u&#34;</span>, <span style="color:#e6db74">&#34;eu&#34;</span>)
+speeches<span style="color:#f92672">$</span>text <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">str_replace_all</span>(speeches<span style="color:#f92672">$</span>text, <span style="color:#e6db74">&#34;unintelligible&#34;</span>, <span style="color:#e6db74">&#34; &#34;</span>)
+speeches<span style="color:#f92672">$</span>text <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">str_replace_all</span>(speeches<span style="color:#f92672">$</span>text, <span style="color:#e6db74">&#34;inaudible&#34;</span>, <span style="color:#e6db74">&#34; &#34;</span>)
+speeches<span style="color:#f92672">$</span>text <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">str_replace_all</span>(speeches<span style="color:#f92672">$</span>text, <span style="color:#e6db74">&#34;http://videos.senat.fr/video/videos/2016/video32690.html&#34;</span>, <span style="color:#e6db74">&#34; &#34;</span>)
+
+<span style="color:#75715e">#remove repeated whitespace</span>
+speeches<span style="color:#f92672">$</span>text <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">str_squish</span>(speeches<span style="color:#f92672">$</span>text)
+</code></pre></div><p>Create Corpus</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">corp <span style="color:#f92672">=</span> <span style="color:#a6e22e">corpus</span>(speeches, docid_field <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;speech_num&#34;</span>)
+
+<span style="color:#a6e22e">docvars</span>(corp, <span style="color:#e6db74">&#34;Speech_Length&#34;</span>) <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">ntoken</span>(corp)
+
+<span style="color:#75715e">#removing small documents from corpus</span>
+corp <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">corpus_subset</span>(corp, URLs <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#34;https://www.nato.int/cps/en/natohq/official_texts_165243.htm?selectedLocale=en&#34;</span>)
+</code></pre></div><p>Create Tokens &amp; DFM</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">tok <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">tokens</span>(corp,
+              remove_punct <span style="color:#f92672">=</span> <span style="color:#66d9ef">TRUE</span>,
+              remove_numbers <span style="color:#f92672">=</span> <span style="color:#66d9ef">TRUE</span>,
+              remove_symbols <span style="color:#f92672">=</span> <span style="color:#66d9ef">TRUE</span>)
+
+dfm <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">dfm</span>(tok)
+
+dfm <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">dfm_remove</span>(dfm, pattern <span style="color:#f92672">=</span> <span style="color:#a6e22e">stopwords</span>(<span style="color:#e6db74">&#34;en&#34;</span>))
+</code></pre></div><p>Find Context of Words</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#75715e">#word_context &lt;- kwic(tok, pattern =&#34;insert here&#34;, window = 8)</span>
+
+<span style="color:#75715e">#View(word_context)</span>
+</code></pre></div><p>Find Top Words</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#75715e">#find top features:</span>
+corpus_dfm_features <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">textstat_frequency</span>(dfm, n <span style="color:#f92672">=</span> <span style="color:#ae81ff">50</span>)
+
+<span style="color:#a6e22e">str</span>(corpus_dfm_features)
+</code></pre></div><pre><code>## Classes 'frequency', 'textstat' and 'data.frame':    50 obs. of  5 variables:
+##  $ feature  : chr  &quot;defence&quot; &quot;allies&quot; &quot;security&quot; &quot;russia&quot; ...
+##  $ frequency: num  7663 7057 6596 6039 5232 ...
+##  $ rank     : num  1 2 3 4 5 6 7 8 9 10 ...
+##  $ docfreq  : num  809 819 917 624 810 777 628 791 801 757 ...
+##  $ group    : chr  &quot;all&quot; &quot;all&quot; &quot;all&quot; &quot;all&quot; ...
+</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#75715e"># Sort by reverse frequency order</span>
+corpus_dfm_features<span style="color:#f92672">$</span>feature <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">with</span>(corpus_dfm_features , <span style="color:#a6e22e">reorder</span>(feature, <span style="color:#f92672">-</span>frequency))
+
+<span style="color:#a6e22e">ggplot</span>(corpus_dfm_features, <span style="color:#a6e22e">aes</span>(x <span style="color:#f92672">=</span> feature, y <span style="color:#f92672">=</span> frequency)) <span style="color:#f92672">+</span>
+    <span style="color:#a6e22e">geom_point</span>() <span style="color:#f92672">+</span> <span style="color:#a6e22e">theme_minimal</span>() <span style="color:#f92672">+</span>
+    <span style="color:#a6e22e">theme</span>(axis.text.x <span style="color:#f92672">=</span> <span style="color:#a6e22e">element_text</span>(angle <span style="color:#f92672">=</span> <span style="color:#ae81ff">90</span>, hjust <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>)) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">labs</span>(x <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Word&#34;</span>, y <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Frequency&#34;</span>)
+</code></pre></div><figure><img src="/images/NATO_Images/WordFrequency.png"/><figcaption>
+            <h4>Word Frequencies</h4>
+        </figcaption>
+</figure>
+
+<p>============= <em>DICTIONARY ANALYSIS</em> =============</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#75715e">#Create Dictionary</span>
+cyber_dict <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">dictionary</span>(<span style="color:#a6e22e">list</span>(Cyber <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;cyber*&#34;</span>,
+                                        <span style="color:#e6db74">&#34;hack*&#34;</span>,
+                                        <span style="color:#e6db74">&#34;malware*&#34;</span>,
+                                        <span style="color:#e6db74">&#34;firewall*&#34;</span>,
+                                        <span style="color:#e6db74">&#34;digital*&#34;</span>,
+                                        <span style="color:#e6db74">&#34;computer&#34;</span>,
+                                        <span style="color:#e6db74">&#34;softwar*&#34;</span>,
+                                        <span style="color:#e6db74">&#34;network*&#34;</span>,
+                                        <span style="color:#e6db74">&#34;code*&#34;</span>,
+                                        <span style="color:#e6db74">&#34;usb&#34;</span>,
+                                        <span style="color:#e6db74">&#34;phish*&#34;</span>,
+                                        <span style="color:#e6db74">&#34;password*&#34;</span>,
+                                        <span style="color:#e6db74">&#34;disinfo*&#34;</span>,
+                                        <span style="color:#e6db74">&#34;misinfo&#34;</span>,
+                                        <span style="color:#e6db74">&#34;bot*&#34;</span>,
+                                        <span style="color:#e6db74">&#34;ddos&#34;</span>,
+                                        <span style="color:#e6db74">&#34;ransom*&#34;</span>,
+                                        <span style="color:#e6db74">&#34;trojan&#34;</span>,
+                                        <span style="color:#e6db74">&#34;worm&#34;</span>,
+                                        <span style="color:#e6db74">&#34;zeroday&#34;</span>,
+                                        <span style="color:#e6db74">&#34;hybrid&#34;</span>,
+                                        <span style="color:#e6db74">&#34;pledge&#34;</span>,
+                                        <span style="color:#e6db74">&#34;online&#34;</span>,
+                                        <span style="color:#e6db74">&#34;internet&#34;</span>,
+                                        <span style="color:#e6db74">&#34;vulnerabilit*&#34;</span>,
+                                        <span style="color:#e6db74">&#34;wannacry&#34;</span>,
+                                        <span style="color:#e6db74">&#34;cni&#34;</span>,
+                                        <span style="color:#e6db74">&#34;solarwinds&#34;</span>
+                                        )))
+
+<span style="color:#75715e">#Create DFM</span>
+cyber_dict_dfm <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">dfm_lookup</span>(dfm, dictionary <span style="color:#f92672">=</span> cyber_dict)
+</code></pre></div><p>Plot Dictionary Results</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#75715e">#Generate Required Variables</span>
+<span style="color:#a6e22e">docvars</span>(corp, <span style="color:#e6db74">&#34;Cyber&#34;</span>) <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">as.numeric</span>(cyber_dict_dfm)
+
+<span style="color:#a6e22e">docvars</span>(corp, <span style="color:#e6db74">&#34;propcyber&#34;</span>) <span style="color:#f92672">=</span> <span style="color:#a6e22e">docvars</span>(corp, <span style="color:#e6db74">&#34;Cyber&#34;</span>) <span style="color:#f92672">/</span> <span style="color:#a6e22e">docvars</span>(corp, <span style="color:#e6db74">&#34;Speech_Length&#34;</span>)
+
+<span style="color:#a6e22e">docvars</span>(corp, <span style="color:#e6db74">&#34;slidingwindow&#34;</span>) <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">slide_dbl</span>((<span style="color:#a6e22e">docvars</span>(corp, <span style="color:#e6db74">&#34;propcyber&#34;</span>)), <span style="color:#f92672">~</span><span style="color:#a6e22e">mean</span>(.x), .before <span style="color:#f92672">=</span> <span style="color:#ae81ff">14</span>, .after <span style="color:#f92672">=</span> <span style="color:#ae81ff">14</span>, .complete <span style="color:#f92672">=</span> <span style="color:#66d9ef">TRUE</span>)
+
+<span style="color:#75715e">#Plot results</span>
+<span style="color:#a6e22e">ggplot</span>(<span style="color:#a6e22e">docvars</span>(corp), <span style="color:#a6e22e">aes</span>(x <span style="color:#f92672">=</span> date, y <span style="color:#f92672">=</span> slidingwindow)) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">geom_point</span>(colour <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;seagreen4&#34;</span>) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">geom_smooth</span>(colour <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;seagreen3&#34;</span>) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">theme_minimal</span>() <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">geom_vline</span>(xintercept <span style="color:#f92672">=</span> <span style="color:#a6e22e">as.numeric</span>(<span style="color:#a6e22e">as.Date</span>(<span style="color:#e6db74">&#34;2017-05-11&#34;</span>))) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">geom_vline</span>(xintercept <span style="color:#f92672">=</span> <span style="color:#a6e22e">as.numeric</span>(<span style="color:#a6e22e">as.Date</span>(<span style="color:#e6db74">&#34;2020-08-12&#34;</span>))) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">labs</span>(x <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Date&#34;</span>, y <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Average proportion of speech dedicated to words from \ncyber-dictionary over 28 speech sliding window&#34;</span>)
+</code></pre></div><figure><img src="/images/NATO_Images/CyberDict.png"/><figcaption>
+            <h4>Cyber Dictionary Results</h4>
+        </figcaption>
+</figure>
+
+<p>===================== <em>STM</em> =====================</p>
+<p>Convert to stm</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#75715e">#convert the dfm to a format used for stm</span>
+dfm_stm <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">convert</span>(dfm, to <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;stm&#34;</span>)
+</code></pre></div><p>create stm</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">K <span style="color:#f92672">=</span> <span style="color:#ae81ff">28</span>
+
+
+stm_NATO <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">stm</span>(documents <span style="color:#f92672">=</span> dfm,
+             data <span style="color:#f92672">=</span> <span style="color:#a6e22e">docvars</span>(dfm),
+            K <span style="color:#f92672">=</span> K, seed <span style="color:#f92672">=</span> <span style="color:#ae81ff">123</span>, verbose <span style="color:#f92672">=</span> <span style="color:#66d9ef">FALSE</span>)
+</code></pre></div><p>Print the common words for each topic</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">labelTopics</span>(stm_NATO)
+</code></pre></div><pre><code>## Topic 1 Top Words:
+##       Highest Prob: cyber, defence, allies, capabilities, military,
+            forces, command
+##       FREX: korea, structure, cyber, ok, row, japan, command
+##       Lift: abe's, aided, alittihad, anchorage, arina, atrous, b9
+##       Score: korea, row, reckless, ok, korean, moderator, japan
+## Topic 2 Top Words:
+##       Highest Prob: treaty, russia, allies, inf, new, missiles, us
+##       FREX: inf, compliance, missiles, treaty, violation, ssc8, missile
+##       Lift: submission, marson, 100billion, 4x30, 5g.we, accreditations,
+          adhered
+##       Score: inf, missiles, compliance, ssc8, intermediaterange, treaty,
+          nuclear
+## Topic 3 Top Words:
+##       Highest Prob: russia, security, defence, forces, alliance,
+          european, war
+##       FREX: russias, helsinki, neighbours, rap, longterm, greater, wales
+##       Lift: 61st, abbreviations, aclear, ago.it, aircrews, aired, akhtar
+##       Score: rap, isils, postcold, antiaircraft, ii, insurgency, morocco
+## Topic 4 Top Words:
+##       Highest Prob: turkey, allies, syria, iraq, support, fight, isis
+##       FREX: daesh, isis, northern, syria, turkey, iraq, iraqi
+##       Lift: arabs, christians, effectivement, sabbagh, 16,000large,
+          adana, agression
+##       Score: turkey, syria, daesh, iraqi, isis, soleimani, turkeys
+## Topic 5 Top Words:
+##       Highest Prob: turkey, syria, now, european, turkish, think,
+          important
+##       FREX: asieh, namdar, turkish, migrant, greece, aegean, frontex
+##       Lift: abbiamo, aktan, alliotmarie, ancora, androulakis, avete,
+          backtoback
+##       Score: asieh, namdar, di, che, henri, brok, ozel
+## Topic 6 Top Words:
+##       Highest Prob: china, change, allies, together, climate, military,
+          see
+##       FREX: climate, china, rise, australia, change, emissions, kube
+##       Lift: 29alliesandfriends, 30member, 80million, aboutburdensharing,
+          aboutduplication, aboutprojecting, abreast
+##       Score: china, climate, kube, preiss, markus, emissions, courtney
+## Topic 7 Top Words:
+##       Highest Prob: montenegro, security, country, serbia, important,
+          region, minister
+##       FREX: serbia, montenegro, macedonia, albania, bosnia, accession,
+          moldova
+##       Lift: accidentincampdailast, advices, affection, aforementioned,
+          albania's, albania.your, albaniahas
+##       Score: serbia, montenegro, slovenia, croatia, belgrade, serbian,
+          albania
+## Topic 8 Top Words:
+##       Highest Prob: support, fight, terrorism, cooperation, security,
+          coalition, countries
+##       FREX: jordan, libya, coalition, mediterranean, isil, operation,
+          officers
+##       Lift: alattiyah, alsabah, egyptian, gentiloni, ghazouani, newshub,
+          sheikh
+##       Score: kuwait, jordan, ici, isil, iraqi, gulf, sophia
+## Topic 9 Top Words:
+##       Highest Prob: exercise, general, trident, juncture, command,
+          military, force
+##       FREX: trident, juncture, admiral, exercise, commander, portugal,
+          observers
+##       Lift: adm, azeredo, b2, baton, betton, bodo, cindy
+##       Score: houdet, trident, domrse, juncture, brice, hanslothar, foggo
+## Topic 10 Top Words:
+##       Highest Prob: alliance, europe, years, together, world, us, people
+##       FREX: freedom, berlin, germanys, celebrate, excellencies, stood,
+          tribute
+##       Lift: 69th, abandoning, auschwitz, auspicious, bano, brundtland,
+          builder
+##       Score: wrner, germanys, memorial, manfred, christchurch, hamburg,
+          exhibition
+## Topic 11 Top Words:
+##       Highest Prob: think, alliance, know, defence, well, now, important
+##       FREX: rose, matter, stress, wanted, underscore, madame, publics
+##       Lift: bettel, gowing, #weare, 26th, abled, ably, abou
+##       Score: rose, marton, urgrosdy, outputs, purchases, jules, madame
+## Topic 12 Top Words:
+##       Highest Prob: european, eu, union, defence, cooperation, europe,
+          together
+##       FREX: eu, noneu, federica, european, union, mogherini, duplication
+##       Lift: borgasio, cheapest, fleckenstein, picula, 32nd, 33rd, abolish
+##       Score: eu, noneu, federica, mogherini, european, tusk, mcallister
+## Topic 13 Top Words:
+##       Highest Prob: security, women, peace, gender, conflict, violence,
+          sexual
+##       FREX: sexual, gender, women, equality, children, womens,
+          conflictrelated
+##       Lift: japans, mead, unscr1325, 40.7mio, 41st, 55th, aaf
+##       Score: gender, sexual, conflictrelated, unscr, lens, wps, womens
+## Topic 14 Top Words:
+##       Highest Prob: ukraine, russia, support, minsk, allies, think,
+          ceasefire
+##       FREX: minsk, ceasefire, ukraine, ukrainian, separatists, ukraines,
+          agreements
+##       Lift: 20and, 32year, accentuated, adheres, agreedto, agreeements,
+          airdefence
+##       Score: minsk, ceasefire, ukraine, ukraines, separatists, kaminski,
+          matthew
+## Topic 15 Top Words:
+##       Highest Prob: think, know, going, well, president, now, just
+##       FREX: niblett, robin, se, q, trump, theyre, r
+##       Lift: #strongerwithallies, 1800s, 1930s, 2030s, 30thmember, 4thof,
+          70billion
+##       Score: niblett, brad, robin, trump, graham, rose, jorge
+## Topic 16 Top Words:
+##       Highest Prob: defence, military, security, alliance, de, chiefs, la
+##       FREX: chiefs, la, nous, de, je, et, du
+##       Lift: 129th, 183rd, 20year, 29e, 4year, acquises, acteurs
+##       Score: chiefs, la, nous, pour, je, de, des
+## Topic 17 Top Words:
+##       Highest Prob: cyber, security, technologies, resilience, need,
+          new, defence
+##       FREX: technologies, innovation, cyberspace, technological,
+          disruptive, resilience, edge
+##       Lift: 21th, anciens, biases, declaratory, delorean, deniz,
+        driverless
+##       Score: innovation, ai, technologies, disruptive, technological,
+          cyberspace, edge
+## Topic 18 Top Words:
+##       Highest Prob: georgia, sea, black, support, security, continue, meeting
+##       FREX: georgia, georgian, black, georgias, reforms, package, substantial
+##       Lift: anaklia, boarding, janelidze, salom, bakhtadze, abruliani, adventures
+##       Score: georgia, georgian, georgias, azov, bakhtadze, abkhazia, reforms
+## Topic 19 Top Words:
+##       Highest Prob: defence, alliance, forces, important, force, security, part
+##       FREX: poland, romania, estonia, lithuania, latvia, readiness, multinational
+##       Lift: andris, berzins, cospedal, fir, garciamargallo, gunnlaugsson, jakobsdottir
+##       Score: spearhead, estonia, duda, latvia, rutte, bulgaria, spain
+## Topic 20 Top Words:
+##       Highest Prob: us, think, know, just, way, one, something
+##       FREX: mircea, dempsey, geoan, jrges, ulrich, judy, hans
+##       Lift: ambitiously, arturs, beliefs, berzina, braw, condominium, divergent
+##       Score: mircea, geoan, jrges, ulrich, dempsey, manson, judy
+## Topic 21 Top Words:
+##       Highest Prob: russia, dialogue, military, important, presence, meeting, council
+##       FREX: transparency, predictability, incidents, vienna, dialogue, document, zapad
+##       Lift: olsen, 20years, 99th, abdulla, abelan, aggravates, aivars
+##       Score: zapad, olsen, russia, vienna, aleppo, dacian, ciolos
+## Topic 22 Top Words:
+##       Highest Prob: allies, support, afghanistan, now, question, course, military
+##       FREX: covid19, pandemic, medical, health, deconfliction, coronavirus, consult
+##       Lift: aalla, adnkronos, afforded, agenzia, ahmadi, ahmedhemken, airtraffic
+##       Score: covid19, pandemic, coronavirus, taliban, piers, cazalet, virus
+## Topic 23 Top Words:
+##       Highest Prob: nuclear, weapons, treaty, think, arms, control, chemical
+##       FREX: npt, chemical, ban, nonproliferation, disarmament, nuclear, weapons
+##       Lift: npt, 40plus, 500km, 50plus, abandons, abided, accelerator
+##       Score: npt, gudrun, nuclear, ban, persson, chemical, inf
+## Topic 24 Top Words:
+##       Highest Prob: afghanistan, afghan, forces, support, security, mission, peace
+##       FREX: afghan, afghans, taliban, ghani, resolute, afghanistan, advise
+##       Lift: amery, amidi, angering, goggles, hamal, humanly, mashal
+##       Score: taliban, afghan, afghans, ghani, afghanistan, resolute, reconciliation
+## Topic 25 Top Words:
+##       Highest Prob: general, question, russia, think, know, now, ukraine
+##       FREX: ignatius, kosachev, pavel, konstantin, david, dozier, breedlove
+##       Lift: 13yearold, 215th, 8am, a29, a29s, abbasi, accommodation
+##       Score: ignatius, nuland, dozier, konstantin, kosachev, pavel, victoria
+## Topic 26 Top Words:
+##       Highest Prob: defence, allies, spending, us, europe, increase, president
+##       FREX: spending, trump, cuts, burden, increase, spend, canada
+##       Lift: 151billion, 179billion, 260million, adaptingto, alastair, alienate, alls
+##       Score: trump, spending, starr, cuts, burden, row, burdensharing
+## Topic 27 Top Words:
+##       Highest Prob: defence, question, much, allies, like, think, first
+##       FREX: assembly, bayley, attila, delegation, mesterhzy, parliamentary, hugh
+##       Lift: alleslev, apeldoorn, askin, ausrine, aydin, benyon, berat
+##       Score: bayley, hugh, alli, attila, mesterhzy, paolo, turner
+## Topic 28 Top Words:
+##       Highest Prob: russia, one, think, many, war, different, able
+##       FREX: norway, norwegian, war, big, actually, soviet, cold
+##       Lift: 6billion, acadamic, acquirement, adverts, almond, alumnis, alumnus
+##       Score: kurt, volker, moderator, academic, norway, pact, russia
+</code></pre>
+<p>Find which topics talk about cyber</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">findTopic</span>(stm_NATO, <span style="color:#e6db74">&#34;cyber&#34;</span>)
+</code></pre></div><pre><code>## 2 topics contained 1 words in the list: 1, 17
+</code></pre>
+<p>Make it into a table for easier manipulation</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">stm_table <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">make.dt</span>(stm_NATO, <span style="color:#a6e22e">docvars</span>(dfm))
+</code></pre></div><p>Create rolling window</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#75715e">#Create overarching topics</span>
+stm_table <span style="color:#f92672">&lt;-</span> stm_table <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">mutate</span>(Cybersecurity <span style="color:#f92672">=</span> Topic1 <span style="color:#f92672">+</span> Topic17) <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">mutate</span>(Traditional <span style="color:#f92672">=</span> Topic4 <span style="color:#f92672">+</span> Topic5 <span style="color:#f92672">+</span> Topic8 <span style="color:#f92672">+</span> Topic9 <span style="color:#f92672">+</span> Topic14 <span style="color:#f92672">+</span> Topic18 <span style="color:#f92672">+</span> Topic21  <span style="color:#f92672">+</span> Topic24 <span style="color:#f92672">+</span> Topic25 )
+
+<span style="color:#75715e">#Generate sliding window for cyber</span>
+stm_table<span style="color:#f92672">$</span>slidingwindow_C <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">slide_dbl</span>(stm_table<span style="color:#f92672">$</span>Cybersecurity, <span style="color:#f92672">~</span><span style="color:#a6e22e">mean</span>(.x), .before <span style="color:#f92672">=</span> <span style="color:#ae81ff">14</span>, .after <span style="color:#f92672">=</span> <span style="color:#ae81ff">14</span>, .complete <span style="color:#f92672">=</span> <span style="color:#66d9ef">TRUE</span>)
+
+<span style="color:#75715e">#Generate sliding window for traditional</span>
+stm_table<span style="color:#f92672">$</span>slidingwindow_T <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">slide_dbl</span>(stm_table<span style="color:#f92672">$</span>Traditional, <span style="color:#f92672">~</span><span style="color:#a6e22e">mean</span>(.x), .before <span style="color:#f92672">=</span> <span style="color:#ae81ff">14</span>, .after <span style="color:#f92672">=</span> <span style="color:#ae81ff">14</span>, .complete <span style="color:#f92672">=</span> <span style="color:#66d9ef">TRUE</span>)
+
+
+<span style="color:#75715e">#Pivot to longer format</span>
+stm_table_tidy <span style="color:#f92672">&lt;-</span> stm_table <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">pivot_longer</span>(names_to <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Topic&#34;</span>,
+               values_to <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Proportion&#34;</span>,
+               cols <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;docnum&#34;</span>, <span style="color:#e6db74">&#34;titles&#34;</span>, <span style="color:#e6db74">&#34;URLs&#34;</span>, <span style="color:#e6db74">&#34;date&#34;</span>, <span style="color:#e6db74">&#34;month&#34;</span>, <span style="color:#e6db74">&#34;year&#34;</span>, <span style="color:#e6db74">&#34;Speech_Length&#34;</span>))
+
+<span style="color:#75715e">#Filter datasets for plotting</span>
+stm_table_tidy_value <span style="color:#f92672">&lt;-</span> stm_table_tidy <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">filter</span>(Topic <span style="color:#f92672">%in%</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;slidingwindow_C&#34;</span>))
+
+stm_table_tidy_value2 <span style="color:#f92672">&lt;-</span> stm_table_tidy <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">filter</span>(Topic <span style="color:#f92672">%in%</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;slidingwindow_C&#34;</span>, <span style="color:#e6db74">&#34;slidingwindow_T&#34;</span>))
+</code></pre></div><p>Graph Results</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">theme_set</span>(<span style="color:#a6e22e">theme_minimal</span>())
+
+<span style="color:#a6e22e">ggplot</span>(stm_table_tidy_value, <span style="color:#a6e22e">aes</span>(x <span style="color:#f92672">=</span> date, y <span style="color:#f92672">=</span> Proportion)) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">geom_point</span>(colour <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;indianred2&#34;</span>)<span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">geom_smooth</span>(colour <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;indianred1&#34;</span>) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">geom_vline</span>(xintercept <span style="color:#f92672">=</span> <span style="color:#a6e22e">as.numeric</span>(<span style="color:#a6e22e">as.Date</span>(<span style="color:#e6db74">&#34;2017-05-11&#34;</span>))) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">geom_vline</span>(xintercept <span style="color:#f92672">=</span> <span style="color:#a6e22e">as.numeric</span>(<span style="color:#a6e22e">as.Date</span>(<span style="color:#e6db74">&#34;2020-08-12&#34;</span>))) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">labs</span>(x <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Date&#34;</span>, y <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Average proportion of speeches dedicated to topic \nover 28-speech sliding window&#34;</span>)
+</code></pre></div><pre><code>## `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = &quot;cs&quot;)'
+</code></pre>
+<figure><img src="/images/NATO_Images/CyberProp.png"/><figcaption>
+            <h4>Topic Model Results: Cybersecurity</h4>
+        </figcaption>
+</figure>
+
+<pre><code>## `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = &quot;cs&quot;)'
+</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">ggplot</span>(stm_table_tidy_value2, <span style="color:#a6e22e">aes</span>(x <span style="color:#f92672">=</span> date, y <span style="color:#f92672">=</span> Proportion, colour <span style="color:#f92672">=</span> Topic, shape <span style="color:#f92672">=</span> Topic)) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">geom_point</span>()<span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">geom_smooth</span>() <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">labs</span>(x <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Date&#34;</span>, y <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Average proportion of speeches dedicated to topic \nover 28-speech sliding window&#34;</span>) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">scale_colour_manual</span>(name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Topic&#34;</span>,
+                      labels <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;Cybersecurity&#34;</span>, <span style="color:#e6db74">&#34;Traditional&#34;</span>),
+                      values <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;indianred2&#34;</span>, <span style="color:#e6db74">&#34;dodgerblue4&#34;</span>)) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">scale_shape_manual</span>(name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Topic&#34;</span>,
+                      labels <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;Cybersecurity&#34;</span>, <span style="color:#e6db74">&#34;Traditional&#34;</span>),
+                      values <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">19</span>, <span style="color:#ae81ff">17</span>))  
+</code></pre></div><pre><code>## `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = &quot;cs&quot;)'
+</code></pre>
+<figure><img src="/images/NATO_Images/TradVsCyber.png"/><figcaption>
+            <h4>Topic Model Results: Cybersecurity vs Traditional</h4>
+        </figcaption>
+</figure>
+
+<pre><code>## `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = &quot;cs&quot;)'
+</code></pre>
+<p>Find the document that most represents a topic</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#75715e">#stm_table %&gt;%</span>
+  <span style="color:#75715e">#slice_max(Topic17, n=5) %&gt;%</span>
+  <span style="color:#75715e">#select(docnum, Topic17)</span>
+</code></pre></div><p>======== <em>Combine data</em> ========</p>
+<p>Create a dataframe out of dictionary results</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">dict_table <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">data.frame</span>(count <span style="color:#f92672">=</span> <span style="color:#a6e22e">docvars</span>(corp, <span style="color:#e6db74">&#34;propcyber&#34;</span>), date <span style="color:#f92672">=</span> <span style="color:#a6e22e">docvars</span>(corp, <span style="color:#e6db74">&#34;date&#34;</span>), url <span style="color:#f92672">=</span> <span style="color:#a6e22e">docvars</span>(corp, <span style="color:#e6db74">&#34;URLs&#34;</span>), dictwindow <span style="color:#f92672">=</span> <span style="color:#a6e22e">docvars</span>(corp, <span style="color:#e6db74">&#34;slidingwindow&#34;</span>)) <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">rownames_to_column</span>(<span style="color:#e6db74">&#34;docnum&#34;</span>) <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">mutate</span>(docnum <span style="color:#f92672">=</span> <span style="color:#a6e22e">as.numeric</span>(docnum))
+</code></pre></div><p>Merge Dictionary and Topic Model Results</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">merged_tables <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">left_join</span>(stm_table_tidy_value, dict_table, by <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;docnum&#34;</span>)
+</code></pre></div><p>Plot results against one another</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">ggplot</span>(merged_tables, <span style="color:#a6e22e">aes</span>(x <span style="color:#f92672">=</span> dictwindow, y <span style="color:#f92672">=</span> Proportion)) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">geom_point</span>() <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">geom_smooth</span>(method <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;lm&#34;</span>) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">labs</span>(x <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Dictionary Proportion&#34;</span>, y <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Topic Model Proportion&#34;</span>)
+</code></pre></div><pre><code>## `geom_smooth()` using formula 'y ~ x'
+</code></pre>
+<figure><img src="/images/NATO_Images/Correlation.png"/><figcaption>
+            <h4>Correlation Between Dictionary Method and Topic Modelling Method Results</h4>
+        </figcaption>
+</figure>
+
+<pre><code>## `geom_smooth()` using formula 'y ~ x'
+</code></pre>
+<p>Calculate Correlation</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">cor</span>(merged_tables<span style="color:#f92672">$</span>dictwindow, merged_tables<span style="color:#f92672">$</span>Proportion, use <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;complete.obs&#34;</span>)
+</code></pre></div><pre><code>## [1] 0.7337996
+</code></pre>
+<p>========== <em>Other Topics</em> ==========</p>
+<p>Generate Graph to analyse other non-traditional topics</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">Other_Topics <span style="color:#f92672">&lt;-</span> stm_table
+
+<span style="color:#75715e">#Calculate Sliding Windows:</span>
+Other_Topics<span style="color:#f92672">$</span>Climate <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">slide_dbl</span>((<span style="color:#a6e22e">as.numeric</span>(Other_Topics<span style="color:#f92672">$</span>Topic6)), <span style="color:#f92672">~</span><span style="color:#a6e22e">mean</span>(.x), .before <span style="color:#f92672">=</span> <span style="color:#ae81ff">14</span>, .after <span style="color:#f92672">=</span> <span style="color:#ae81ff">14</span>, .complete <span style="color:#f92672">=</span> <span style="color:#66d9ef">TRUE</span>)
+Other_Topics<span style="color:#f92672">$</span>Gender <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">slide_dbl</span>(Other_Topics<span style="color:#f92672">$</span>Topic13, <span style="color:#f92672">~</span><span style="color:#a6e22e">mean</span>(.x), .before <span style="color:#f92672">=</span> <span style="color:#ae81ff">14</span>, .after <span style="color:#f92672">=</span> <span style="color:#ae81ff">14</span>, .complete <span style="color:#f92672">=</span> <span style="color:#66d9ef">TRUE</span>)
+Other_Topics<span style="color:#f92672">$</span>Covid <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">slide_dbl</span>(Other_Topics<span style="color:#f92672">$</span>Topic22, <span style="color:#f92672">~</span><span style="color:#a6e22e">mean</span>(.x), .before <span style="color:#f92672">=</span> <span style="color:#ae81ff">14</span>, .after <span style="color:#f92672">=</span> <span style="color:#ae81ff">14</span>, .complete <span style="color:#f92672">=</span> <span style="color:#66d9ef">TRUE</span>)
+
+<span style="color:#75715e">#Pivot</span>
+Other_Topics <span style="color:#f92672">&lt;-</span> Other_Topics <span style="color:#f92672">%&gt;%</span>
+    <span style="color:#a6e22e">pivot_longer</span>(names_to <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Topic&#34;</span>,
+               values_to <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Proportion&#34;</span>,
+               cols <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;docnum&#34;</span>, <span style="color:#e6db74">&#34;titles&#34;</span>, <span style="color:#e6db74">&#34;URLs&#34;</span>, <span style="color:#e6db74">&#34;date&#34;</span>, <span style="color:#e6db74">&#34;month&#34;</span>, <span style="color:#e6db74">&#34;year&#34;</span>, <span style="color:#e6db74">&#34;Speech_Length&#34;</span>)) <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">filter</span>(Topic <span style="color:#f92672">%in%</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;Climate&#34;</span>, <span style="color:#e6db74">&#34;Gender&#34;</span>, <span style="color:#e6db74">&#34;Covid&#34;</span>))
+
+<span style="color:#75715e">#Plot</span>
+<span style="color:#a6e22e">ggplot</span>(Other_Topics, <span style="color:#a6e22e">aes</span>(x <span style="color:#f92672">=</span> date, y <span style="color:#f92672">=</span> Proportion, colour <span style="color:#f92672">=</span> Topic, shape <span style="color:#f92672">=</span> Topic)) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">geom_point</span>() <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">geom_smooth</span>() <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">labs</span>(x <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Date&#34;</span>, y <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Average proportion of speeches dedicated to topic \nover 28 speech sliding window&#34;</span>)<span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">scale_colour_manual</span>(name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Topic&#34;</span>,
+                      labels <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;Climate&#34;</span>, <span style="color:#e6db74">&#34;COVID-19&#34;</span>, <span style="color:#e6db74">&#34;Gender&#34;</span>),
+                      values <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;green3&#34;</span>, <span style="color:#e6db74">&#34;orange&#34;</span>, <span style="color:#e6db74">&#34;mediumpurple2&#34;</span>)) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">scale_shape_manual</span>(name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Topic&#34;</span>,
+                      labels <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;Climate&#34;</span>, <span style="color:#e6db74">&#34;COVID-19&#34;</span>, <span style="color:#e6db74">&#34;Gender&#34;</span>),
+                      values <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">17</span>, <span style="color:#ae81ff">19</span>, <span style="color:#ae81ff">18</span>))
+</code></pre></div><pre><code>## `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = &quot;cs&quot;)'
+</code></pre>
+<figure><img src="/images/NATO_Images/Other_Topics.png"/><figcaption>
+            <h4>Plot of Other Non Traditional Topics&#39; Propotions</h4>
+        </figcaption>
+</figure>
+
+<p>========= <em>Appendix &amp; Other Code Used</em> =========</p>
+<p>Plot results together</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">merged_pivot <span style="color:#f92672">&lt;-</span> merged_tables <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">mutate</span>(Dictionary <span style="color:#f92672">=</span> (dictwindow <span style="color:#f92672">*</span> <span style="color:#ae81ff">40</span>),
+         Topic_Model <span style="color:#f92672">=</span> Proportion) <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">select</span>(<span style="color:#f92672">-</span><span style="color:#a6e22e">c</span>(Proportion, dictwindow)) <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">pivot_longer</span>(names_to <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Method&#34;</span>,
+               values_to <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Proportion&#34;</span>,
+               cols <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;Dictionary&#34;</span>, <span style="color:#e6db74">&#34;Topic_Model&#34;</span>))
+
+<span style="color:#a6e22e">theme_set</span>(<span style="color:#a6e22e">theme_minimal</span>())
+
+<span style="color:#a6e22e">ggplot</span>(merged_pivot, <span style="color:#a6e22e">aes</span>(x <span style="color:#f92672">=</span> date.x, y <span style="color:#f92672">=</span> Proportion, colour <span style="color:#f92672">=</span> Method, shape <span style="color:#f92672">=</span> Method)) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">geom_point</span>() <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">geom_smooth</span>() <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">labs</span>(x <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Date&#34;</span>, y <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Average proportion of speeches dedicated to cybersecurity \nover 28 speech sliding window&#34;</span>) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">scale_colour_manual</span>(name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Method&#34;</span>,
+                      labels <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;Dictionary (x40)&#34;</span>, <span style="color:#e6db74">&#34;Topic Model&#34;</span>),
+                      values <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;seagreen4&#34;</span>, <span style="color:#e6db74">&#34;indianred2&#34;</span>)) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">scale_shape_manual</span>(name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Method&#34;</span>,
+                      labels <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;Dictionary (x40)&#34;</span>, <span style="color:#e6db74">&#34;Topic Model&#34;</span>),
+                      values <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">19</span>, <span style="color:#ae81ff">19</span>))
+</code></pre></div><pre><code>## `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = &quot;cs&quot;)'
+</code></pre>
+<figure><img src="/images/NATO_Images/Same_plot.png"/><figcaption>
+            <h4>Dictionary and Topic Model Plotted Together for Robustness</h4>
+        </figcaption>
+</figure>
+
+<p>Summary Statistics Code</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#75715e">#Descriptive Statistics</span>
+<span style="color:#75715e">#mean(docvars(corp, &#34;Speech_Length&#34;))</span>
+<span style="color:#75715e">#sd(docvars(corp, &#34;Speech_Length&#34;))</span>
+<span style="color:#75715e">#min(docvars(corp, &#34;Speech_Length&#34;))</span>
+<span style="color:#75715e">#max(docvars(corp, &#34;Speech_Length&#34;))</span>
+
+<span style="color:#75715e">#--------------</span>
+
+<span style="color:#75715e">#SG &lt;- speeches %&gt;%</span>
+<span style="color:#75715e">#  filter(str_detect(titles, &#34;Stoltenberg&#34;) | str_detect(titles, &#34;NATO Secretary General&#34;) |  str_detect(titles, &#34;Annual Report&#34;))</span>
+
+<span style="color:#75715e">#DSG &lt;- speeches %&gt;%</span>
+<span style="color:#75715e">#  filter(str_detect(titles, &#34;Gottemoeller&#34;) | str_detect(titles, &#34;Deputy Secretary General&#34;) | str_detect(titles, &#34;Vershbow&#34;) | str_detect(titles, &#34;Mircea&#34;))</span>
+
+<span style="color:#75715e">#Overlap &lt;- SG %&gt;%</span>
+<span style="color:#75715e">#  filter(str_detect(titles, &#34;Gottemoeller&#34;) | str_detect(titles, &#34;Deputy Secretary General&#34;) | str_detect(titles, &#34;Vershbow&#34;))</span>
+
+<span style="color:#75715e">#Other &lt;- speeches %&gt;%</span>
+<span style="color:#75715e">#    filter(!(str_detect(titles, &#34;Stoltenberg&#34;) | str_detect(titles, &#34;NATO Secretary General&#34;) | str_detect(titles, &#34;Gottemoeller&#34;) | str_detect(titles, &#34;Deputy Secretary General&#34;) | str_detect(titles, &#34;Vershbow&#34;) | str_detect(titles, &#34;Mircea&#34;) | str_detect(titles, &#34;Annual Report&#34;)))</span>
+
+<span style="color:#75715e">#corp_SG = corpus(SG, docid_field = &#34;speech_num&#34;)</span>
+
+<span style="color:#75715e">#docvars(corp_SG, &#34;Speech_Length&#34;) &lt;- ntoken(corp_SG)</span>
+
+<span style="color:#75715e">#corp_SG &lt;- corpus_subset(corp_SG, URLs != &#34;https://www.nato.int/cps/en/natohq/official_texts_165243.htm?selectedLocale=en&#34; &amp; URLs != &#34;https://www.nato.int/cps/en/natohq/opinions_137307.htm?selectedLocale=en&#34; &amp; URLs != &#34;https://www.nato.int/cps/en/natohq/news_118761.htm?selectedLocale=en&#34; &amp; URLs != &#34;https://www.nato.int/cps/en/natohq/opinions_172324.htm?selectedLocale=en&#34; &amp; URLs != &#34;https://www.nato.int/cps/en/natohq/opinions_120674.htm?selectedLocale=en&#34;)</span>
+
+<span style="color:#75715e">#corp_SG &lt;- corpus_subset(corp_SG, URLs != &#34;https://www.nato.int/cps/en/natohq/opinions_149822.htm?selectedLocale=en&#34;)</span>
+
+<span style="color:#75715e">#mean(docvars(corp_SG , &#34;Speech_Length&#34;))</span>
+
+<span style="color:#75715e">#sd(docvars(corp_SG , &#34;Speech_Length&#34;))</span>
+
+<span style="color:#75715e">#min(docvars(corp_SG , &#34;Speech_Length&#34;))</span>
+
+<span style="color:#75715e">#max(docvars(corp_SG , &#34;Speech_Length&#34;))</span>
+
+<span style="color:#75715e">#------</span>
+<span style="color:#75715e">#corp_DSG = corpus(DSG, docid_field = &#34;speech_num&#34;)</span>
+
+<span style="color:#75715e">#docvars(corp_DSG, &#34;Speech_Length&#34;) &lt;- ntoken(corp_DSG)</span>
+
+<span style="color:#75715e">#corp_DSG &lt;- corpus_subset(corp_DSG, URLs != &#34;https://www.nato.int/cps/en/natohq/official_texts_165243.htm?selectedLocale=en&#34; &amp; URLs != &#34;https://www.nato.int/cps/en/natohq/opinions_137307.htm?selectedLocale=en&#34; &amp; URLs != &#34;https://www.nato.int/cps/en/natohq/news_118761.htm?selectedLocale=en&#34; &amp; URLs != &#34;https://www.nato.int/cps/en/natohq/opinions_172324.htm?selectedLocale=en&#34; &amp; URLs != &#34;https://www.nato.int/cps/en/natohq/opinions_120674.htm?selectedLocale=en&#34;)</span>
+
+<span style="color:#75715e">#corp_DSG &lt;- corpus_subset(corp_DSG, URLs != &#34;https://www.nato.int/cps/en/natohq/opinions_182018.htm?selectedLocale=en&#34;)</span>
+
+<span style="color:#75715e">#mean(docvars(corp_DSG, &#34;Speech_Length&#34;))</span>
+
+<span style="color:#75715e">#sd(docvars(corp_DSG, &#34;Speech_Length&#34;))</span>
+
+<span style="color:#75715e">#min(docvars(corp_DSG, &#34;Speech_Length&#34;))</span>
+
+<span style="color:#75715e">#max(docvars(corp_DSG, &#34;Speech_Length&#34;))</span>
+
+<span style="color:#75715e">#------</span>
+
+<span style="color:#75715e">#corp_Other = corpus(Other, docid_field = &#34;speech_num&#34;)</span>
+
+<span style="color:#75715e">#docvars(corp_Other, &#34;Speech_Length&#34;) &lt;- ntoken(corp_Other)</span>
+
+<span style="color:#75715e">#corp_Other &lt;- corpus_subset(corp_Other, URLs != &#34;https://www.nato.int/cps/en/natohq/official_texts_165243.htm?selectedLocale=en&#34; &amp; URLs != &#34;https://www.nato.int/cps/en/natohq/opinions_137307.htm?selectedLocale=en&#34; &amp; URLs != &#34;https://www.nato.int/cps/en/natohq/news_118761.htm?selectedLocale=en&#34; &amp; URLs != &#34;https://www.nato.int/cps/en/natohq/opinions_172324.htm?selectedLocale=en&#34; &amp; URLs != &#34;https://www.nato.int/cps/en/natohq/opinions_120674.htm?selectedLocale=en&#34;)</span>
+
+<span style="color:#75715e">#mean(docvars(corp_Other, &#34;Speech_Length&#34;))</span>
+
+<span style="color:#75715e">#sd(docvars(corp_Other, &#34;Speech_Length&#34;))</span>
+
+<span style="color:#75715e">#min(docvars(corp_Other, &#34;Speech_Length&#34;))</span>
+
+<span style="color:#75715e">#max(docvars(corp_Other, &#34;Speech_Length&#34;))</span>
+</code></pre></div><p>Collecting Diagnostic Values</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#75715e">#number of topics to check</span>
+<span style="color:#75715e">#K&lt;-c(26, 28, 30)</span>
+
+<span style="color:#75715e">#set values for variables</span>
+<span style="color:#75715e">#documents &lt;- dfm_stm$documents</span>
+<span style="color:#75715e">#vocab &lt;- dfm_stm$vocab</span>
+<span style="color:#75715e">#meta &lt;- dfm_stm$meta</span>
+<span style="color:#75715e">#this seed was used for progress report presentation. If its changed then the labels will need to be changed as well</span>
+<span style="color:#75715e">#set.seed(123)</span>
+
+<span style="color:#75715e">#generate diagnostic values</span>
+<span style="color:#75715e">#kresult &lt;- searchK(documents, vocab, K, data=meta)</span>
+<span style="color:#75715e">#plot(kresult)</span>
+
+<span style="color:#75715e">#----------------</span>
+
+<span style="color:#75715e">#generate topics</span>
+<span style="color:#75715e">#stm_NATO26 &lt;- stm(documents = dfm,</span>
+  <span style="color:#75715e">#            data = docvars(dfm),</span>
+    <span style="color:#75715e">#          K = 26, seed = 123, verbose = FALSE)</span>
+
+<span style="color:#75715e">#stm_NATO &lt;- stm(documents = dfm_temp,</span>
+  <span style="color:#75715e">#            data = docvars(dfm_temp),</span>
+   <span style="color:#75715e">#           K = 28, seed = 123, verbose = FALSE, max.em.its = 10)</span>
+
+<span style="color:#75715e">#stm_NATO30 &lt;- stm(documents = dfm,</span>
+ <span style="color:#75715e">#             data = docvars(dfm),</span>
+  <span style="color:#75715e">#            K = 30, seed = 123, verbose = FALSE)</span>
+
+<span style="color:#75715e">#stm_NATO40 &lt;- stm(documents = dfm,</span>
+ <span style="color:#75715e">#             data = docvars(dfm),</span>
+  <span style="color:#75715e">#            K = 40, seed = 123, verbose = FALSE, max.em.its = 10)</span>
+
+
+
+
+<span style="color:#75715e">#topics_26 &lt;- as.data.frame(cbind(c(1:26),exclusivity(stm_NATO26), semanticCoherence(model = stm_NATO26, documents), &#34;26 Topics&#34;))</span>
+<span style="color:#75715e">#topics_28 &lt;- as.data.frame(cbind(c(1:28),exclusivity(stm_NATO), semanticCoherence(model = stm_NATO, documents), &#34;28 Topics&#34;))</span>
+<span style="color:#75715e">#topics_30 &lt;- as.data.frame(cbind(c(1:30),exclusivity(stm_NATO30), semanticCoherence(model = stm_NATO30, documents), &#34;30 Topics&#34;))</span>
+<span style="color:#75715e">#topics_40 &lt;- as.data.frame(cbind(c(1:40),exclusivity(stm_NATO40), semanticCoherence(model = stm_NATO40, documents), &#34;Mod40&#34;))</span>
+
+<span style="color:#75715e">#topics_excl_sem &lt;- rbind(topics_26, topics_28, topics_30)</span>
+<span style="color:#75715e">#colnames(topics_excl_sem)&lt;-c(&#34;K&#34;,&#34;Exclusivity&#34;, &#34;Semantic_Coherence&#34;, &#34;Model&#34;)</span>
+
+<span style="color:#75715e">#topics_excl_sem$Exclusivity &lt;- as.numeric(as.character(topics_excl_sem$Exclusivity))</span>
+<span style="color:#75715e">#topics_excl_sem$Semantic_Coherence &lt;- as.numeric(as.character(topics_excl_sem$Semantic_Coherence))</span>
+
+<span style="color:#75715e">#theme_set(theme_minimal())</span>
+
+<span style="color:#75715e">#ggplot(topics_excl_sem, aes(x = Semantic_Coherence, y = Exclusivity, colour = Model)) +</span>
+<span style="color:#75715e">#  geom_point(size = 2, alpha = 0.7) +</span>
+<span style="color:#75715e">#  geom_text(aes(label = K), nudge_x = .05, nudge_y = .05) +</span>
+<span style="color:#75715e">#  labs(x = &#34;Semantic coherence&#34;,</span>
+<span style="color:#75715e">#       y = &#34;Exclusivity&#34;,</span>
+<span style="color:#75715e">#       title = &#34;Comparing Exclusivity and Semantic Coherence&#34;)</span>
+
+<span style="color:#a6e22e">ggsave</span>(<span style="color:#e6db74">&#34;Images/Exclusivity_Semantic_Coherence.png&#34;</span>, width <span style="color:#f92672">=</span> <span style="color:#ae81ff">8</span>, height <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>)
+</code></pre></div><pre><code>## `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = &quot;cs&quot;)'
+
+## Warning: Removed 56 rows containing non-finite values (stat_smooth).
+
+## Warning: Removed 56 rows containing missing values (geom_point).
+</code></pre>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://example.com" >
+    &copy;  Tomas Maher 2021 
+  </a>
+    <div>
+
+
+
+
+
+
+
+<a href="https://linkedin.com/in/tomasmaher" target="_blank" class="link-transition linkedin link dib z-999 pt3 pt0-l mr1" title="LinkedIn link" rel="noopener" aria-label="follow on LinkedIn——Opens in a new window">
+  <svg  height="32px"  style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000" width="8px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+</span></a>
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

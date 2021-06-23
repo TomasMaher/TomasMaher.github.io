@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Project 1: Regression Analysis - Code | Tomas Maher</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="Assessing the impact of Green Parties in Government">
+    <meta name="generator" content="Hugo 0.83.1" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="Project 1: Regression Analysis - Code" />
+<meta property="og:description" content="Assessing the impact of Green Parties in Government" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://example.com/post/project_1_regression-code/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2020-12-23T10:58:08-04:00" />
+<meta property="article:modified_time" content="2020-12-23T10:58:08-04:00" /><meta property="og:site_name" content="Tomas Maher" />
+
+<meta itemprop="name" content="Project 1: Regression Analysis - Code">
+<meta itemprop="description" content="Assessing the impact of Green Parties in Government"><meta itemprop="datePublished" content="2020-12-23T10:58:08-04:00" />
+<meta itemprop="dateModified" content="2020-12-23T10:58:08-04:00" />
+<meta itemprop="wordCount" content="2240">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Project 1: Regression Analysis - Code"/>
+<meta name="twitter:description" content="Assessing the impact of Green Parties in Government"/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  
+  
+  <header class="cover bg-top" style="background-image: url('https://example.com/images/GreenParty_Images/GreenParty.jpg');">
+    <div class="pb3-m pb6-l bg-black-60">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        Tomas Maher
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/about/" title="About Me page">
+              About Me
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/post/" title="Projects page">
+              Projects
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+
+
+
+
+
+
+
+<a href="https://linkedin.com/in/tomasmaher" target="_blank" class="link-transition linkedin link dib z-999 pt3 pt0-l mr1" title="LinkedIn link" rel="noopener" aria-label="follow on LinkedIn——Opens in a new window">
+  <svg  height="32px"  style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000" width="8px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+</span></a>
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+      <div class="tc-l pv6 ph3 ph4-ns">
+        
+          <h1 class="f2 f1-l fw2 white-90 mb0 lh-title">Project 1: Regression Analysis - Code</h1>
+          
+            <h2 class="fw1 f5 f3-l white-80 measure-wide-l center lh-copy mt3 mb4">
+              Assessing the impact of Green Parties in Government
+            </h2>
+          
+        
+      </div>
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        PROJECTS
+      </aside>
+      
+
+
+
+
+  <div id="sharing" class="mt3">
+
+    
+    <a href="https://www.facebook.com/sharer.php?u=https://example.com/post/project_1_regression-code/" class="facebook no-underline" aria-label="share on Facebook">
+      <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M28.765,50.32h6.744V33.998h4.499l0.596-5.624h-5.095  l0.007-2.816c0-1.466,0.14-2.253,2.244-2.253h2.812V17.68h-4.5c-5.405,0-7.307,2.729-7.307,7.317v3.377h-3.369v5.625h3.369V50.32z   M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
+
+    </a>
+
+    
+    
+    <a href="https://twitter.com/share?url=https://example.com/post/project_1_regression-code/&amp;text=Project%201:%20Regression%20Analysis%20-%20Code" class="twitter no-underline" aria-label="share on Twitter">
+      <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/></svg>
+
+    </a>
+
+    
+    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://example.com/post/project_1_regression-code/&amp;title=Project%201:%20Regression%20Analysis%20-%20Code" class="linkedin no-underline" aria-label="share on LinkedIn">
+      <svg  height="32px"  style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+
+    </a>
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">Project 1: Regression Analysis - Code</h1>
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2020-12-23T10:58:08-04:00">December 23, 2020</time>
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><h1 id="approach">Approach</h1>
+<p>This was the first coding project I completed at University. In hindsight there are many changes I would make (which I will outline below in the coming weeks) but it was a really interesting project and was my first time using regression on real-world data.</p>
+<p>Some of the steps involved include:</p>
+<ul>
+<li>Obtaining information regarding emissions from an EPI dataset</li>
+<li>Obtaining information regarding Green Parties from the Parlgov dataset</li>
+<li>Obtaining information regarding countries demographics from the World Bank&rsquo;s datasets</li>
+<li>Merging these datasets together and calculating relevant variables</li>
+<li>Generating a number of plots to help identify outliers and trends</li>
+<li>Creating a linear regression model to test my hypothesis</li>
+</ul>
+<p>I have pasted the code I used below but I will update it to include the outputs of the ggplot commands in the coming weeks.</p>
+<h1 id="code">Code</h1>
+<p><strong>Load libraries</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">library</span>(tidyverse)
+<span style="color:#a6e22e">library</span>(readxl)
+<span style="color:#a6e22e">library</span>(texreg)
+<span style="color:#a6e22e">library</span>(infer)
+<span style="color:#a6e22e">library</span>(ggeffects)
+
+<span style="color:#a6e22e">theme_set</span>(<span style="color:#a6e22e">theme_minimal</span>())
+
+</code></pre></div><p><strong>Import and Tidy</strong></p>
+<p><em>OECD</em></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">
+dat_OECD <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;Australia&#34;</span>, <span style="color:#e6db74">&#34;Austria&#34;</span>, <span style="color:#e6db74">&#34;Belgium&#34;</span>, <span style="color:#e6db74">&#34;Canada&#34;</span>, <span style="color:#e6db74">&#34;Chile&#34;</span>,
+               <span style="color:#e6db74">&#34;Colombia&#34;</span>, <span style="color:#e6db74">&#34;Czech Republic&#34;</span>, <span style="color:#e6db74">&#34;Denmark&#34;</span>, <span style="color:#e6db74">&#34;Estonia&#34;</span>,<span style="color:#e6db74">&#34;Finland&#34;</span>,
+               <span style="color:#e6db74">&#34;France&#34;</span>, <span style="color:#e6db74">&#34;Germany&#34;</span>,<span style="color:#e6db74">&#34;Greece&#34;</span>,<span style="color:#e6db74">&#34;Hungary&#34;</span>, <span style="color:#e6db74">&#34;Iceland&#34;</span>, <span style="color:#e6db74">&#34;Ireland&#34;</span>,
+               <span style="color:#e6db74">&#34;Israel&#34;</span>, <span style="color:#e6db74">&#34;Italy&#34;</span>, <span style="color:#e6db74">&#34;Japan&#34;</span>, <span style="color:#e6db74">&#34;Latvia&#34;</span>, <span style="color:#e6db74">&#34;Lithuania&#34;</span>, <span style="color:#e6db74">&#34;Luxembourg&#34;</span>,
+               <span style="color:#e6db74">&#34;Mexico&#34;</span>,<span style="color:#e6db74">&#34;Netherlands&#34;</span>, <span style="color:#e6db74">&#34;New Zealand&#34;</span>, <span style="color:#e6db74">&#34;Norway&#34;</span>,<span style="color:#e6db74">&#34;Poland&#34;</span>,<span style="color:#e6db74">&#34;Portugal&#34;</span>,
+               <span style="color:#e6db74">&#34;Slovakia&#34;</span>,<span style="color:#e6db74">&#34;Slovenia&#34;</span>,<span style="color:#e6db74">&#34;South Korea&#34;</span>,<span style="color:#e6db74">&#34;Spain&#34;</span>,<span style="color:#e6db74">&#34;Sweden&#34;</span>,<span style="color:#e6db74">&#34;Switzerland&#34;</span>,
+               <span style="color:#e6db74">&#34;Turkey&#34;</span>, <span style="color:#e6db74">&#34;United Kingdom&#34;</span>, <span style="color:#e6db74">&#34;United States of America&#34;</span>)
+</code></pre></div><p><em>EPI</em></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">
+dat_EPI <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">read_excel</span>(<span style="color:#e6db74">&#34;epi10yearchange.xlsx&#34;</span>)
+
+dat_EPI <span style="color:#f92672">&lt;-</span> dat_EPI <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">select</span>(<span style="color:#e6db74">&#34;country&#34;</span>, <span style="color:#e6db74">&#34;EPI.new&#34;</span>, <span style="color:#e6db74">&#34;EPI.change&#34;</span>) <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">rename</span>(Country <span style="color:#f92672">=</span> country) <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">filter</span>(Country <span style="color:#f92672">%in%</span> dat_OECD) <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">mutate</span>(EPI.old <span style="color:#f92672">=</span> EPI.new <span style="color:#f92672">-</span> EPI.change)
+
+<span style="color:#a6e22e">head</span>(dat_EPI)
+
+</code></pre></div><p><em>Greens</em></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">
+Green_Party_OECD <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">read_excel</span>(<span style="color:#e6db74">&#34;Green_Party_OECD.xlsx&#34;</span>)
+Green_Party_Proportions <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">read_excel</span>(<span style="color:#e6db74">&#34;Green Party Proportions.xlsx&#34;</span>)
+
+<span style="color:#a6e22e">colnames</span>(Green_Party_Proportions) <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">sub</span>(<span style="color:#e6db74">&#34;Year\\_&#34;</span>, <span style="color:#e6db74">&#34;Seats\\_&#34;</span>, <span style="color:#a6e22e">colnames</span>(Green_Party_Proportions))
+
+
+<span style="color:#75715e">#Tidy the green dataset and calculate the proportion of seats</span>
+dat_Greens <span style="color:#f92672">&lt;-</span> Green_Party_OECD <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">filter</span>(Country <span style="color:#f92672">%in%</span> dat_OECD) <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">select</span>(<span style="color:#e6db74">&#34;Country&#34;</span>, <span style="color:#e6db74">&#34;Year&#34;</span>, <span style="color:#e6db74">&#34;Perc&#34;</span>, <span style="color:#e6db74">&#34;Gov&#34;</span>, <span style="color:#e6db74">&#34;Prop&#34;</span>) <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">mutate</span>(Perc_Greens <span style="color:#f92672">=</span> <span style="color:#a6e22e">round</span>((Perc), <span style="color:#ae81ff">2</span>)) <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">mutate</span>(Year <span style="color:#f92672">=</span> <span style="color:#a6e22e">as.numeric</span>(Year)) <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">mutate</span>(Year <span style="color:#f92672">=</span> Year <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>)
+
+<span style="color:#75715e">#Aggregate version</span>
+dat_Greens_Summ <span style="color:#f92672">&lt;-</span> Green_Party_OECD <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">filter</span>(Country <span style="color:#f92672">%in%</span> dat_OECD) <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">select</span>(<span style="color:#e6db74">&#34;Country&#34;</span>, <span style="color:#e6db74">&#34;Year&#34;</span>, <span style="color:#e6db74">&#34;Perc&#34;</span>, <span style="color:#e6db74">&#34;Gov&#34;</span>, <span style="color:#e6db74">&#34;Prop&#34;</span>) <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">mutate</span>(Perc_Greens <span style="color:#f92672">=</span> <span style="color:#a6e22e">round</span>((Perc), <span style="color:#ae81ff">2</span>)) <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">mutate</span>(Year <span style="color:#f92672">=</span> <span style="color:#a6e22e">as.numeric</span>(Year)) <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">mutate</span>(Year <span style="color:#f92672">=</span> Year <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">filter</span>(Year <span style="color:#f92672">%in%</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;2009&#34;</span>, <span style="color:#e6db74">&#34;2010&#34;</span>, <span style="color:#e6db74">&#34;2011&#34;</span>, <span style="color:#e6db74">&#34;2012&#34;</span>, <span style="color:#e6db74">&#34;2013&#34;</span>, <span style="color:#e6db74">&#34;2014&#34;</span>, <span style="color:#e6db74">&#34;2015&#34;</span>, <span style="color:#e6db74">&#34;2016&#34;</span>, <span style="color:#e6db74">&#34;2017&#34;</span>, <span style="color:#e6db74">&#34;2018&#34;</span>, <span style="color:#e6db74">&#34;2019&#34;</span>)) <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">group_by</span>(Country) <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">summarise</span>(avg_seats_perc <span style="color:#f92672">=</span> <span style="color:#a6e22e">mean</span>(Perc_Greens),
+            sum_gov <span style="color:#f92672">=</span> <span style="color:#a6e22e">sum</span>(Gov))
+
+
+<span style="color:#a6e22e">head</span>(dat_Greens)
+
+<span style="color:#a6e22e">head</span>(dat_Greens_Summ)
+
+</code></pre></div><p><em>GDP</em></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">dat_GDP <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">read_excel</span>(<span style="color:#e6db74">&#34;GDP_raw_na.xlsx&#34;</span>)
+
+<span style="color:#a6e22e">colnames</span>(dat_GDP) <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">sub</span>(<span style="color:#e6db74">&#34;GDP.raw.&#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>, <span style="color:#a6e22e">colnames</span>(dat_GDP))
+
+dat_GDP <span style="color:#f92672">&lt;-</span> dat_GDP <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">select</span>(<span style="color:#e6db74">&#34;country&#34;</span>, <span style="color:#e6db74">&#34;2001&#34;</span>, <span style="color:#e6db74">&#34;2002&#34;</span>, <span style="color:#e6db74">&#34;2003&#34;</span>, <span style="color:#e6db74">&#34;2004&#34;</span>, <span style="color:#e6db74">&#34;2005&#34;</span>, <span style="color:#e6db74">&#34;2006&#34;</span>, <span style="color:#e6db74">&#34;2007&#34;</span>,
+         <span style="color:#e6db74">&#34;2008&#34;</span>, <span style="color:#e6db74">&#34;2009&#34;</span>, <span style="color:#e6db74">&#34;2010&#34;</span>, <span style="color:#e6db74">&#34;2011&#34;</span>, <span style="color:#e6db74">&#34;2012&#34;</span>, <span style="color:#e6db74">&#34;2013&#34;</span>,
+         <span style="color:#e6db74">&#34;2014&#34;</span>, <span style="color:#e6db74">&#34;2015&#34;</span>, <span style="color:#e6db74">&#34;2016&#34;</span>, <span style="color:#e6db74">&#34;2017&#34;</span>, <span style="color:#e6db74">&#34;2018&#34;</span>, <span style="color:#e6db74">&#34;2019&#34;</span>) <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">rename</span>(Country <span style="color:#f92672">=</span> country) <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">filter</span>(Country <span style="color:#f92672">%in%</span> dat_OECD) <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">pivot_longer</span>(names_to <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Year&#34;</span>,
+               values_to <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;GDP&#34;</span>,
+               cols <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#e6db74">&#34;Country&#34;</span>) <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">mutate</span>(GDP <span style="color:#f92672">=</span> (<span style="color:#a6e22e">as.numeric</span>(GDP) <span style="color:#f92672">/</span> <span style="color:#ae81ff">1000</span>))
+
+
+<span style="color:#a6e22e">head</span>(dat_GDP)
+
+
+</code></pre></div><p><em>POP</em></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">dat_POP <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">read_excel</span>(<span style="color:#e6db74">&#34;Population.xlsx&#34;</span>)
+
+<span style="color:#a6e22e">colnames</span>(dat_POP) <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">sub</span>(<span style="color:#e6db74">&#34;POP.raw.&#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>, <span style="color:#a6e22e">colnames</span>(dat_POP))
+
+dat_POP <span style="color:#f92672">&lt;-</span> dat_POP <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">select</span>(<span style="color:#e6db74">&#34;country&#34;</span>, <span style="color:#e6db74">&#34;2001&#34;</span>, <span style="color:#e6db74">&#34;2002&#34;</span>, <span style="color:#e6db74">&#34;2003&#34;</span>, <span style="color:#e6db74">&#34;2004&#34;</span>, <span style="color:#e6db74">&#34;2005&#34;</span>, <span style="color:#e6db74">&#34;2006&#34;</span>, <span style="color:#e6db74">&#34;2007&#34;</span>,
+         <span style="color:#e6db74">&#34;2008&#34;</span>, <span style="color:#e6db74">&#34;2009&#34;</span>, <span style="color:#e6db74">&#34;2010&#34;</span>, <span style="color:#e6db74">&#34;2011&#34;</span>, <span style="color:#e6db74">&#34;2012&#34;</span>, <span style="color:#e6db74">&#34;2013&#34;</span>,
+         <span style="color:#e6db74">&#34;2014&#34;</span>, <span style="color:#e6db74">&#34;2015&#34;</span>, <span style="color:#e6db74">&#34;2016&#34;</span>, <span style="color:#e6db74">&#34;2017&#34;</span>, <span style="color:#e6db74">&#34;2018&#34;</span>, <span style="color:#e6db74">&#34;2019&#34;</span>) <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">rename</span>(Country <span style="color:#f92672">=</span> country) <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">filter</span>(Country <span style="color:#f92672">%in%</span> dat_OECD) <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">pivot_longer</span>(names_to <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Year&#34;</span>,
+               values_to <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;POP&#34;</span>,
+               cols <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#e6db74">&#34;Country&#34;</span>) <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">mutate</span>(POP <span style="color:#f92672">=</span> <span style="color:#a6e22e">as.numeric</span>(POP))
+
+
+<span style="color:#a6e22e">head</span>(dat_POP)
+
+</code></pre></div><p><em>GDP and POP Merge</em></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#75715e">#For Unique</span>
+dat_GDP_POP <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">merge</span>(dat_GDP, dat_POP, by <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;Country&#34;</span>, <span style="color:#e6db74">&#34;Year&#34;</span>)) <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">mutate</span>(GDPPC <span style="color:#f92672">=</span> GDP <span style="color:#f92672">/</span> POP) <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">mutate</span>(Year_Num <span style="color:#f92672">=</span> <span style="color:#a6e22e">as.numeric</span>(Year))
+
+<span style="color:#75715e">#For Aggregated</span>
+dat_GDP_POP_Summ <span style="color:#f92672">&lt;-</span> dat_GDP_POP <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">filter</span>(Year <span style="color:#f92672">%in%</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;2009&#34;</span>, <span style="color:#e6db74">&#34;2010&#34;</span>, <span style="color:#e6db74">&#34;2011&#34;</span>, <span style="color:#e6db74">&#34;2012&#34;</span>, <span style="color:#e6db74">&#34;2013&#34;</span>, <span style="color:#e6db74">&#34;2014&#34;</span>, <span style="color:#e6db74">&#34;2015&#34;</span>, <span style="color:#e6db74">&#34;2016&#34;</span>, <span style="color:#e6db74">&#34;2017&#34;</span>, <span style="color:#e6db74">&#34;2018&#34;</span>, <span style="color:#e6db74">&#34;2019&#34;</span>)) <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">group_by</span>(Country) <span style="color:#f92672">%&gt;%</span>  
+  <span style="color:#a6e22e">summarise</span>(Avg_GDPPC <span style="color:#f92672">=</span> <span style="color:#a6e22e">mean</span>(GDPPC, na.rm <span style="color:#f92672">=</span> <span style="color:#66d9ef">TRUE</span>))
+
+<span style="color:#a6e22e">head</span>(dat_GDP_POP)
+
+<span style="color:#a6e22e">head</span>(dat_GDP_POP_Summ)
+
+
+
+</code></pre></div><p><em>2018 GDPPC</em></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">
+<span style="color:#75715e">#2018 was the most recent data available for both in the dataframe</span>
+dat_GDPPC_2018 <span style="color:#f92672">&lt;-</span> dat_GDP_POP <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">filter</span>(Year <span style="color:#f92672">==</span> <span style="color:#ae81ff">2018</span>) <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">select</span>(<span style="color:#e6db74">&#34;Country&#34;</span>, <span style="color:#e6db74">&#34;GDPPC&#34;</span>) <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">rename</span>(GDPPC_2018 <span style="color:#f92672">=</span> GDPPC)
+
+<span style="color:#a6e22e">head</span>(dat_GDPPC_2018)
+
+</code></pre></div><p><em>CO2</em></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">
+<span style="color:#75715e">#Percentage change</span>
+dat_CO2 <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">read_excel</span>(<span style="color:#e6db74">&#34;CDO_diff.xlsx&#34;</span>) <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">filter</span>(Country <span style="color:#f92672">%in%</span> dat_OECD) <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">pivot_longer</span>(names_to <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Year&#34;</span>,
+               values_to <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;CO2_Perc_Change&#34;</span>,
+               cols <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#e6db74">&#34;Country&#34;</span>) <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">filter</span>(Year <span style="color:#f92672">!=</span> <span style="color:#ae81ff">2000</span>)
+
+
+<span style="color:#a6e22e">head</span>(dat_CO2)
+
+<span style="color:#75715e">#Absolute CO2</span>
+
+dat_CO2_abs <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">read_excel</span>(<span style="color:#e6db74">&#34;CDO_raw_na.xlsx&#34;</span>)
+
+<span style="color:#a6e22e">colnames</span>(dat_CO2_abs) <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">sub</span>(<span style="color:#e6db74">&#34;CDO.raw.&#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>, <span style="color:#a6e22e">colnames</span>(dat_CO2_abs))
+
+dat_CO2_abs <span style="color:#f92672">&lt;-</span> dat_CO2_abs <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">filter</span>(Country <span style="color:#f92672">%in%</span> dat_OECD) <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">pivot_longer</span>(names_to <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Year&#34;</span>,
+               values_to <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;CO2&#34;</span>,
+               cols <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#e6db74">&#34;Country&#34;</span>) <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">mutate</span>(CO2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">as.numeric</span>(CO2))
+
+<span style="color:#a6e22e">head</span>(dat_CO2_abs)
+
+
+</code></pre></div><p><em>Number of Parties</em></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">
+dat_PartyNo <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">read_excel</span>(<span style="color:#e6db74">&#34;Number of Parties.xlsx&#34;</span>)
+
+</code></pre></div><p><em>Dataset merge</em></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">
+<span style="color:#75715e">#CO2 Perc Change</span>
+dataset_CO2 <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">merge</span>(dat_CO2, dat_GDP_POP, by <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;Country&#34;</span>, <span style="color:#e6db74">&#34;Year&#34;</span>))
+dataset_CO2 <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">merge</span>(dataset_CO2, dat_PartyNo, by <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;Country&#34;</span>, <span style="color:#e6db74">&#34;Year&#34;</span>))
+
+dataset_CO2 <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">merge</span>(dataset_CO2, dat_Greens, by <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;Country&#34;</span>, <span style="color:#e6db74">&#34;Year&#34;</span>)) <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">select</span>(<span style="color:#e6db74">&#34;Country&#34;</span>, <span style="color:#e6db74">&#34;Year&#34;</span>, <span style="color:#e6db74">&#34;CO2_Perc_Change&#34;</span>, <span style="color:#e6db74">&#34;GDPPC&#34;</span>, <span style="color:#e6db74">&#34;Year_Num&#34;</span>, <span style="color:#e6db74">&#34;Gov&#34;</span>, <span style="color:#e6db74">&#34;Perc_Greens&#34;</span>, <span style="color:#e6db74">&#34;Num_Parties&#34;</span>)
+
+<span style="color:#75715e">#CO2 Absolute</span>
+
+dataset_CO2_abs <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">merge</span>(dat_CO2_abs, dat_GDP_POP, by <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;Country&#34;</span>, <span style="color:#e6db74">&#34;Year&#34;</span>))
+dataset_CO2_abs <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">merge</span>(dataset_CO2_abs, dat_PartyNo, by <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;Country&#34;</span>, <span style="color:#e6db74">&#34;Year&#34;</span>))
+
+dataset_CO2_abs <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">merge</span>(dataset_CO2_abs, dat_Greens, by <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;Country&#34;</span>, <span style="color:#e6db74">&#34;Year&#34;</span>)) <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">select</span>(<span style="color:#e6db74">&#34;Country&#34;</span>, <span style="color:#e6db74">&#34;Year&#34;</span>, <span style="color:#e6db74">&#34;CO2&#34;</span>, <span style="color:#e6db74">&#34;GDPPC&#34;</span>, <span style="color:#e6db74">&#34;Year_Num&#34;</span>, <span style="color:#e6db74">&#34;Gov&#34;</span>, <span style="color:#e6db74">&#34;Perc_Greens&#34;</span>, <span style="color:#e6db74">&#34;Num_Parties&#34;</span>)
+
+
+<span style="color:#75715e">#EPI</span>
+
+dataset_EPI <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">merge</span>(dat_EPI, dat_GDP_POP_Summ, by <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Country&#34;</span>)
+dataset_EPI <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">merge</span>(dataset_EPI, dat_Greens_Summ, by <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Country&#34;</span>)
+dataset_EPI <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">merge</span>(dataset_EPI, dat_GDPPC_2018, by <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Country&#34;</span>)
+
+<span style="color:#a6e22e">head</span>(dataset_CO2)
+
+<span style="color:#a6e22e">head</span>(dataset_CO2_abs)
+
+<span style="color:#a6e22e">head</span>(dataset_EPI)
+
+
+</code></pre></div><p><em>make gov a factor</em></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">dataset_CO2 <span style="color:#f92672">&lt;-</span> dataset_CO2 <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">mutate</span>(Gov <span style="color:#f92672">=</span> <span style="color:#a6e22e">recode</span>(Gov,
+                      <span style="color:#e6db74">&#34;0&#34;</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;No&#34;</span>,
+                      <span style="color:#e6db74">&#34;1&#34;</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Yes&#34;</span>)) <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">mutate</span>(Gov <span style="color:#f92672">=</span> <span style="color:#a6e22e">factor</span>(Gov))
+
+
+dataset_CO2_abs <span style="color:#f92672">&lt;-</span> dataset_CO2_abs <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">mutate</span>(Gov <span style="color:#f92672">=</span> <span style="color:#a6e22e">recode</span>(Gov,
+                      <span style="color:#e6db74">&#34;0&#34;</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;No&#34;</span>,
+                      <span style="color:#e6db74">&#34;1&#34;</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Yes&#34;</span>)) <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">mutate</span>(Gov <span style="color:#f92672">=</span> <span style="color:#a6e22e">factor</span>(Gov))
+
+</code></pre></div><p><em>get the ln of CO2</em></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">
+dataset_CO2_abs <span style="color:#f92672">&lt;-</span> dataset_CO2_abs <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">mutate</span>(LNCO2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">log</span>(CO2))
+
+</code></pre></div><p><em>calculate the Lagged value</em></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">
+dataset_CO2_abs <span style="color:#f92672">&lt;-</span> dataset_CO2_abs <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">group_by</span>(Country) <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">mutate</span>(Lag_CO2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">lag</span>(LNCO2)) <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">mutate</span>(Lag_CO2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">as.numeric</span>(Lag_CO2))
+
+</code></pre></div><p><em><em><strong>Plots</strong></em></em></p>
+<p><em>2020 Results</em></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">
+
+<span style="color:#a6e22e">ggplot</span>(dataset_EPI, <span style="color:#a6e22e">aes</span>(x <span style="color:#f92672">=</span> GDPPC_2018, y <span style="color:#f92672">=</span> EPI.new)) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">geom_point</span>() <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">geom_smooth</span>(method <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;lm&#34;</span>, se <span style="color:#f92672">=</span> <span style="color:#66d9ef">FALSE</span>) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">labs</span>(x <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;2018 GDP Per Capita (PPP 2011USD)&#34;</span>, y <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;2020 Environmental Performance Index&#34;</span>) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">theme</span>(plot.margin <span style="color:#f92672">=</span> <span style="color:#a6e22e">margin</span>(<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">10</span>))
+
+<span style="color:#75715e">#ggsave(&#34;EP2020_GDP1.png&#34;, width = 8, height = 5)</span>
+</code></pre></div><p><em>Multible variable Plots</em></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">
+<span style="color:#a6e22e">ggplot</span>(dataset_EPI, <span style="color:#a6e22e">aes</span>(x <span style="color:#f92672">=</span> GDPPC_2018, y <span style="color:#f92672">=</span> EPI.new, colour <span style="color:#f92672">=</span> sum_gov, size <span style="color:#f92672">=</span> avg_seats_perc)) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">geom_point</span>() <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">geom_smooth</span>(method <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;lm&#34;</span>, se <span style="color:#f92672">=</span> <span style="color:#66d9ef">FALSE</span>) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">labs</span>(x <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;2018 GDP Per Capita (PPP 2011USD)&#34;</span>, y <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;2020 Environmental Performance Index&#34;</span>)
+
+<span style="color:#75715e">#ggsave(&#34;EP2020_GDP.png&#34;, width = 8, height = 5)</span>
+</code></pre></div><p><em>10 Year Change&hellip;</em></p>
+<p><em>..based on GDPPC</em></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">
+<span style="color:#a6e22e">ggplot</span>(dataset_EPI, <span style="color:#a6e22e">aes</span>(x <span style="color:#f92672">=</span> Avg_GDPPC, y <span style="color:#f92672">=</span> EPI.change)) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">geom_point</span>() <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">geom_smooth</span>(method <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;lm&#34;</span>, se <span style="color:#f92672">=</span> <span style="color:#66d9ef">FALSE</span>) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">labs</span>(x <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Average GDP Per Capita between 2009 and 2018 (PPP 2011USD)&#34;</span>, y <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;10-Year Environmental Performance Index Change&#34;</span>)
+
+<span style="color:#75715e">#ggsave(&#34;EPI10_GDP.png&#34;, width = 8, height = 5)</span>
+
+</code></pre></div><p><em>..based on avg seats</em></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">
+<span style="color:#a6e22e">ggplot</span>(dataset_EPI, <span style="color:#a6e22e">aes</span>(x <span style="color:#f92672">=</span> avg_seats_perc, y <span style="color:#f92672">=</span> EPI.change)) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">geom_point</span>() <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">geom_smooth</span>(method <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;lm&#34;</span>, se <span style="color:#f92672">=</span> <span style="color:#66d9ef">FALSE</span>) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">labs</span>(x <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Average Percentage of Seats Green Parties \n held between 2009 and 2019 &#34;</span>, y <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;10-Year Environmental Performance Index Change&#34;</span>)
+
+<span style="color:#75715e">#ggsave(&#34;EPI10_AvgGreen.png&#34;, width = 8, height = 5)</span>
+</code></pre></div><p><em>..based on time in cabinet</em></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">
+<span style="color:#a6e22e">ggplot</span>(dataset_EPI, <span style="color:#a6e22e">aes</span>(x <span style="color:#f92672">=</span> sum_gov, y <span style="color:#f92672">=</span> EPI.change)) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">geom_point</span>() <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">geom_smooth</span>(method <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;lm&#34;</span>, se <span style="color:#f92672">=</span> <span style="color:#66d9ef">FALSE</span>) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">labs</span>(x <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Total number of years when the Green Party held a Cabinet Position between 2009 and 2019&#34;</span>, y <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;10-Year Environmental Performance Index Change&#34;</span>)
+
+<span style="color:#75715e">#ggsave(&#34;EPI_TotCoal.png&#34;, width = 8, height = 5)</span>
+</code></pre></div><p><em>More multiple variable plots</em></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">
+<span style="color:#a6e22e">ggplot</span>(dataset_EPI, <span style="color:#a6e22e">aes</span>(x <span style="color:#f92672">=</span> Avg_GDPPC, y <span style="color:#f92672">=</span> EPI.change, colour <span style="color:#f92672">=</span> sum_gov, size <span style="color:#f92672">=</span> avg_seats_perc)) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">geom_point</span>() <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">geom_smooth</span>(method <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;lm&#34;</span>, se <span style="color:#f92672">=</span> <span style="color:#66d9ef">FALSE</span>) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">labs</span>(x <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Average GDP Per Capita between 2009 and 2018 (PPP 2011USD)&#34;</span>, y <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;10-Year Environmental Performance Index Change&#34;</span>)
+
+<span style="color:#75715e">#ggsave(&#34;EPI_GDP1.png&#34;, width = 8, height = 5)</span>
+</code></pre></div><p><em>Green Seats vs Co2</em></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">
+<span style="color:#a6e22e">ggplot</span>(dataset_CO2, <span style="color:#a6e22e">aes</span>(x <span style="color:#f92672">=</span> Perc_Greens, y <span style="color:#f92672">=</span> CO2_Perc_Change)) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">geom_point</span>() <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">geom_smooth</span>(method <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;lm&#34;</span>, se <span style="color:#f92672">=</span> <span style="color:#66d9ef">FALSE</span>) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">labs</span>(x <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Percentage of Seats Green Parties held in a given year&#34;</span>, y <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Percentage change in CO2 compared to previous year&#34;</span>)
+
+<span style="color:#75715e">#ggsave(&#34;PercCo2_PropGreens1.png&#34;, width = 8, height = 5)</span>
+
+</code></pre></div><p><em>Factored Version</em></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">
+<span style="color:#a6e22e">ggplot</span>(dataset_CO2, <span style="color:#a6e22e">aes</span>(x <span style="color:#f92672">=</span> Perc_Greens, y <span style="color:#f92672">=</span> CO2_Perc_Change, colour <span style="color:#f92672">=</span> Gov)) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">geom_point</span>() <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">geom_smooth</span>(method <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;lm&#34;</span>, se <span style="color:#f92672">=</span> <span style="color:#66d9ef">FALSE</span>) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">labs</span>(x <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Percentage of Seats Green Parties held in a given year&#34;</span>, y <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Percentage change in CO2 Emissions compared to previous year&#34;</span>)
+
+<span style="color:#75715e">#ggsave(&#34;PercCo2_PropGreens.png&#34;, width = 8, height = 5)</span>
+</code></pre></div><p><em>same graphs but with absolute CO2 over the years</em></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">
+<span style="color:#a6e22e">ggplot</span>(dataset_CO2_abs, <span style="color:#a6e22e">aes</span>(x <span style="color:#f92672">=</span> Perc_Greens, y <span style="color:#f92672">=</span> LNCO2)) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">geom_point</span>() <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">geom_smooth</span>(method <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;lm&#34;</span>, se <span style="color:#f92672">=</span> <span style="color:#66d9ef">FALSE</span>) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">labs</span>(x <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Percentage of Seats Green Parties held in a given year&#34;</span>, y <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Natural Log of Total CO2 Emissions in a given year&#34;</span>)
+
+<span style="color:#75715e">#ggsave(&#34;LnCo2_PropGreens1.png&#34;, width = 8, height = 5)</span>
+
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">
+<span style="color:#a6e22e">ggplot</span>(dataset_CO2_abs, <span style="color:#a6e22e">aes</span>(x <span style="color:#f92672">=</span> Perc_Greens, y <span style="color:#f92672">=</span> LNCO2, colour <span style="color:#f92672">=</span> Gov)) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">geom_point</span>() <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">geom_smooth</span>(method <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;lm&#34;</span>, se <span style="color:#f92672">=</span> <span style="color:#66d9ef">FALSE</span>) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">labs</span>(x <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Percentage of Seats Green Parties held in a given year&#34;</span>, y <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Natural Log of Total CO2 Emissions in a given year&#34;</span>)
+
+<span style="color:#75715e">#ggsave(&#34;LnCo2_PropGreens.png&#34;, width = 8, height = 5)</span>
+</code></pre></div><p><em>Year</em></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">
+<span style="color:#75715e">#These lines would have some inverse relationship if Green Parties were effective.</span>
+
+<span style="color:#a6e22e">ggplot</span>(dataset_CO2, <span style="color:#a6e22e">aes</span>(x <span style="color:#f92672">=</span> Year_Num)) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">geom_line</span>(<span style="color:#a6e22e">aes</span>(y <span style="color:#f92672">=</span> CO2_Perc_Change), colour <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;black&#34;</span>) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">geom_line</span>(<span style="color:#a6e22e">aes</span>(y <span style="color:#f92672">=</span> Perc_Greens), colour <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;green&#34;</span>) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">facet_wrap</span>(<span style="color:#f92672">~</span> Country, nrow <span style="color:#f92672">=</span> <span style="color:#ae81ff">6</span>) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">theme</span>(axis.text.x <span style="color:#f92672">=</span> <span style="color:#a6e22e">element_text</span>(angle <span style="color:#f92672">=</span> <span style="color:#ae81ff">90</span>)) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">labs</span>(x <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Year&#34;</span>, y <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Percentage Change in CO2 compared to previous year&#34;</span>)
+
+<span style="color:#75715e">#ggsave(&#34;Line_Graphs.png&#34;, width = 8, height = 5)</span>
+</code></pre></div><p><em><em><strong>Linear Regressions</strong></em></em></p>
+<pre><code class="language-{r" data-lang="{r">
+lm_EPI &lt;- lm(EPI.change ~ avg_seats_perc + sum_gov + Avg_GDPPC + EPI.old, data = dataset_EPI)
+
+htmlreg(lm_EPI, single.row = FALSE, custom.model.names = &quot;EPI 10 Year Change&quot;, custom.coef.names = c(&quot;Intercept&quot;, &quot;Average Percentage of Green MPs in Parliament&quot;, &quot;Number of Years in Cabinet&quot;, &quot;Average GDP Per Capita&quot;, &quot;Previous EPI Value&quot;), digits = 4)
+
+
+</code></pre><pre><code class="language-{r" data-lang="{r">
+lm_CO2 &lt;- lm(CO2_Perc_Change ~ Perc_Greens + Gov + Num_Parties + GDPPC + Country, data = dataset_CO2)
+
+
+</code></pre><pre><code class="language-{r" data-lang="{r">
+lm_CDO &lt;- lm(LNCO2 ~ Perc_Greens + Gov + Num_Parties + GDPPC + Country + Lag_CO2, data = dataset_CO2_abs)
+
+
+</code></pre><pre><code class="language-{r" data-lang="{r">
+htmlreg(list(lm_CO2, lm_CDO), digits = 2, single.row = TRUE, custom.model.names = c(&quot;Percentage CO2 Change&quot;, &quot;Absolute CO2 Value&quot;), custom.coef.names = c(&quot;Intercept&quot;, &quot;Percentage of Green MPs&quot;, &quot;Cabinet: Yes&quot;, &quot;Number of Parties&quot;, &quot;GDP Per Capita&quot;, &quot;Austria&quot;, &quot;Belgium&quot;, &quot;Canada&quot;, &quot;Chile&quot;,
+               &quot;Colombia&quot;, &quot;Czech Republic&quot;, &quot;Denmark&quot;, &quot;Estonia&quot;,&quot;Finland&quot;,
+               &quot;France&quot;, &quot;Germany&quot;,&quot;Greece&quot;,&quot;Hungary&quot;, &quot;Iceland&quot;, &quot;Ireland&quot;,
+               &quot;Israel&quot;, &quot;Italy&quot;, &quot;Japan&quot;, &quot;Latvia&quot;, &quot;Lithuania&quot;, &quot;Luxembourg&quot;,
+               &quot;Mexico&quot;,&quot;Netherlands&quot;, &quot;New Zealand&quot;, &quot;Norway&quot;,&quot;Poland&quot;,&quot;Portugal&quot;,
+               &quot;Slovakia&quot;,&quot;Slovenia&quot;,&quot;South Korea&quot;,&quot;Spain&quot;,&quot;Sweden&quot;,&quot;Switzerland&quot;,
+               &quot;Turkey&quot;, &quot;United Kingdom&quot;, &quot;United States of America&quot;, &quot;Lagged Value of Absolute CO2&quot;))
+
+
+
+</code></pre><p><em><em><strong>predicted values</strong></em></em></p>
+<p><em>Predict EPI</em></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">
+pred_EPI_Change <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">ggpredict</span>(lm_EPI, terms <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;avg_seats_perc&#34;</span>)
+
+<span style="color:#a6e22e">plot</span>(pred_EPI_Change) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">labs</span>(x <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Average Percentage of seats held by Green Party MPs&#34;</span>,
+  y <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Predicted Change in EPI&#34;</span>,
+  title <span style="color:#f92672">=</span> <span style="color:#66d9ef">NULL</span>)
+
+<span style="color:#75715e">#ggsave(&#34;plot_pred_EPI_perc.png&#34;, width = 8, height = 5)</span>
+
+</code></pre></div><p>Predict CO2 Change</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">
+pred_CO2_Change <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">ggpredict</span>(lm_CO2, terms <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;Perc_Greens&#34;</span>, <span style="color:#e6db74">&#34;Gov&#34;</span>))
+
+<span style="color:#a6e22e">plot</span>(pred_CO2_Change) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">labs</span>(x <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Percentage of seats held by Green Party MPs&#34;</span>,
+  y <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Predicted Percentage Change in CO2 Emissions&#34;</span>,
+  title <span style="color:#f92672">=</span> <span style="color:#66d9ef">NULL</span>) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">theme</span>(legend.position <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;bottom&#34;</span>) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">labs</span>(colour <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Cabinet Position?&#34;</span>)
+
+<span style="color:#75715e">#ggsave(&#34;plot_pred_CO2_change_2.png&#34;, width = 8, height = 5)</span>
+
+</code></pre></div><p>Predict CO2</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">
+pred_CO2 <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">ggpredict</span>(lm_CDO, terms <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;Perc_Greens&#34;</span>, <span style="color:#e6db74">&#34;Gov&#34;</span>))
+
+<span style="color:#a6e22e">plot</span>(pred_CO2) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">labs</span>(x <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Percentage of seats held by Green Party MPs&#34;</span>,
+  y <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Predicted Amount of CO2 Emissions&#34;</span>,
+  title <span style="color:#f92672">=</span> <span style="color:#66d9ef">NULL</span>)
+
+<span style="color:#75715e">#ggsave(&#34;plot_pred_CO2_2.png&#34;, width = 8, height = 5)</span>
+
+</code></pre></div><p>Predict EPI</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">
+pred_EPI_Change <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">ggpredict</span>(lm_EPI, terms <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;sum_gov&#34;</span>)
+
+<span style="color:#a6e22e">plot</span>(pred_EPI_Change) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">labs</span>(x <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Total number of years when the Green Party held a cabinet positon&#34;</span>,
+  y <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Predicted EPI Change&#34;</span>,
+  title <span style="color:#f92672">=</span> <span style="color:#66d9ef">NULL</span>)
+
+<span style="color:#75715e">#ggsave(&#34;plot_pred_EPI_gov.png&#34;, width = 8, height = 5)</span>
+
+</code></pre></div><p>Predict CO2 Change</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">
+pred_CO2_Change <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">ggpredict</span>(lm_CO2, terms <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Gov&#34;</span>)
+
+<span style="color:#a6e22e">plot</span>(pred_CO2_Change) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">labs</span>(x <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Does the Green Party have a cabinet position?&#34;</span>,
+  y <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Predicted Percentage Change in CO2 Emissions&#34;</span>,
+  title <span style="color:#f92672">=</span> <span style="color:#66d9ef">NULL</span>)
+
+<span style="color:#75715e">#ggsave(&#34;plot_pred_CO2_change.png&#34;, width = 8, height = 5)</span>
+
+</code></pre></div><p>Predict CO2</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">
+pred_CO2 <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">ggpredict</span>(lm_CDO, terms <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Gov&#34;</span>)
+
+plot_pred_CO2 <span style="color:#f92672">&lt;-</span>  <span style="color:#a6e22e">plot</span>(pred_CO2) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">labs</span>(x <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Does the Green Party have a cabinet position?&#34;</span>,
+  y <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Predicted Quantity of CO2 Emissions&#34;</span>,
+  title <span style="color:#f92672">=</span> <span style="color:#66d9ef">NULL</span>)
+
+plot_pred_CO2
+
+<span style="color:#75715e">#ggsave(&#34;plot_pred_CO2.png&#34;, width = 8, height = 5)</span>
+
+</code></pre></div><p><em><em><strong>Other tests</strong></em></em></p>
+<p>Correlations</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">
+<span style="color:#a6e22e">cor</span>(dataset_EPI<span style="color:#f92672">$</span>GDPPC_2018, dataset_EPI<span style="color:#f92672">$</span>EPI.new)
+
+<span style="color:#a6e22e">cor</span>(dataset_EPI<span style="color:#f92672">$</span>Avg_GDPPC, dataset_EPI<span style="color:#f92672">$</span>EPI.change)
+
+<span style="color:#a6e22e">cor</span>(dataset_EPI<span style="color:#f92672">$</span>Avg_GDPPC, dataset_EPI<span style="color:#f92672">$</span>avg_seats_perc)
+
+<span style="color:#a6e22e">cor</span>(dataset_CO2_abs<span style="color:#f92672">$</span>GDPPC, dataset_CO2_abs<span style="color:#f92672">$</span>Perc_Greens)
+
+<span style="color:#a6e22e">cor</span>(dataset_CO2<span style="color:#f92672">$</span>GDPPC, dataset_CO2<span style="color:#f92672">$</span>Perc_Greens)
+
+</code></pre></div><p>Other Plots</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">
+<span style="color:#a6e22e">ggplot</span>(dataset_EPI, <span style="color:#a6e22e">aes</span>(x <span style="color:#f92672">=</span> Avg_GDPPC, y <span style="color:#f92672">=</span> avg_seats_perc)) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">geom_point</span>()
+
+<span style="color:#a6e22e">ggplot</span>(dataset_CO2, <span style="color:#a6e22e">aes</span>(x <span style="color:#f92672">=</span> GDPPC, y <span style="color:#f92672">=</span> Perc_Greens)) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">geom_point</span>()
+</code></pre></div><p>Summary stats</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">
+summ_dataset_EPI <span style="color:#f92672">&lt;-</span> dataset_EPI <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">summarise</span>(meanEPI <span style="color:#f92672">=</span> <span style="color:#a6e22e">mean</span>(EPI.new), medianEPI <span style="color:#f92672">=</span> <span style="color:#a6e22e">median</span>(EPI.new), modeEPI <span style="color:#f92672">=</span> <span style="color:#a6e22e">mode</span>(EPI.new),
+            minEPI <span style="color:#f92672">=</span> <span style="color:#a6e22e">min</span>(EPI.new), maxEPI <span style="color:#f92672">=</span> <span style="color:#a6e22e">max</span>(EPI.new), sdEPI <span style="color:#f92672">=</span> <span style="color:#a6e22e">sd</span>(EPI.new),
+            meanEPIC <span style="color:#f92672">=</span> <span style="color:#a6e22e">mean</span>(EPI.change), medianEPIC <span style="color:#f92672">=</span> <span style="color:#a6e22e">median</span>(EPI.change), modeEPIC <span style="color:#f92672">=</span> <span style="color:#a6e22e">mode</span>(EPI.change),
+            minEPIC <span style="color:#f92672">=</span> <span style="color:#a6e22e">min</span>(EPI.change), maxEPIC <span style="color:#f92672">=</span> <span style="color:#a6e22e">max</span>(EPI.change), sdEPIC <span style="color:#f92672">=</span> <span style="color:#a6e22e">sd</span>(EPI.change),
+            meanSeats <span style="color:#f92672">=</span> <span style="color:#a6e22e">mean</span>(avg_seats_perc), medianSeats <span style="color:#f92672">=</span> <span style="color:#a6e22e">median</span>(avg_seats_perc), modeSeats <span style="color:#f92672">=</span> <span style="color:#a6e22e">mode</span>(avg_seats_perc),
+            minSeats <span style="color:#f92672">=</span> <span style="color:#a6e22e">min</span>(avg_seats_perc), maxSeats <span style="color:#f92672">=</span> <span style="color:#a6e22e">max</span>(avg_seats_perc), sdSeats <span style="color:#f92672">=</span> <span style="color:#a6e22e">sd</span>(avg_seats_perc),
+            meanGov <span style="color:#f92672">=</span> <span style="color:#a6e22e">mean</span>(sum_gov), medianGov <span style="color:#f92672">=</span> <span style="color:#a6e22e">median</span>(sum_gov), modeGov <span style="color:#f92672">=</span> <span style="color:#a6e22e">mode</span>(sum_gov),
+            minGov <span style="color:#f92672">=</span> <span style="color:#a6e22e">min</span>(sum_gov), maxGov <span style="color:#f92672">=</span> <span style="color:#a6e22e">max</span>(sum_gov), sdGov <span style="color:#f92672">=</span> <span style="color:#a6e22e">sd</span>(sum_gov),
+            meanGDPPC <span style="color:#f92672">=</span> <span style="color:#a6e22e">mean</span>(Avg_GDPPC), medianGDPPC <span style="color:#f92672">=</span> <span style="color:#a6e22e">median</span>(Avg_GDPPC), modeGDPPC <span style="color:#f92672">=</span> <span style="color:#a6e22e">mode</span>(Avg_GDPPC),
+            minGDPPC <span style="color:#f92672">=</span> <span style="color:#a6e22e">min</span>(Avg_GDPPC), maxGDPPC <span style="color:#f92672">=</span> <span style="color:#a6e22e">max</span>(Avg_GDPPC), sdGDPPC <span style="color:#f92672">=</span> <span style="color:#a6e22e">sd</span>(Avg_GDPPC))
+
+summ_dataset_EPI
+
+summ_dataset_CO2 <span style="color:#f92672">&lt;-</span> dataset_CO2 <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">summarise</span>(meanCO2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">mean</span>(CO2_Perc_Change), medianCO2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">median</span>(CO2_Perc_Change), modeCO2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">mode</span>(CO2_Perc_Change),
+            minCO2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">min</span>(CO2_Perc_Change), maxCO2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">max</span>(CO2_Perc_Change), sdCO2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">sd</span>(CO2_Perc_Change),
+            meanSeats <span style="color:#f92672">=</span> <span style="color:#a6e22e">mean</span>(Perc_Greens), medianSeats <span style="color:#f92672">=</span> <span style="color:#a6e22e">median</span>(Perc_Greens), modeSeats <span style="color:#f92672">=</span> <span style="color:#a6e22e">mode</span>(Perc_Greens),
+            minSeats <span style="color:#f92672">=</span> <span style="color:#a6e22e">min</span>(Perc_Greens), maxSeats <span style="color:#f92672">=</span> <span style="color:#a6e22e">max</span>(Perc_Greens), sdSeats <span style="color:#f92672">=</span> <span style="color:#a6e22e">sd</span>(Perc_Greens),
+            meanGDPPC <span style="color:#f92672">=</span> <span style="color:#a6e22e">mean</span>(GDPPC), medianGDPPC <span style="color:#f92672">=</span> <span style="color:#a6e22e">median</span>(GDPPC), modeGDPPC <span style="color:#f92672">=</span> <span style="color:#a6e22e">mode</span>(GDPPC),
+            minGDPPC <span style="color:#f92672">=</span> <span style="color:#a6e22e">min</span>(GDPPC), maxGDPPC <span style="color:#f92672">=</span> <span style="color:#a6e22e">max</span>(GDPPC), sdGDPPC <span style="color:#f92672">=</span> <span style="color:#a6e22e">sd</span>(GDPPC))
+
+summ_dataset_CO2
+
+summ_dataset_CO2_abs <span style="color:#f92672">&lt;-</span> dataset_CO2_abs <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">ungroup</span>() <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">summarise</span>(meanCO2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">mean</span>(CO2), medianCO2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">median</span>(CO2), modeCO2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">mode</span>(CO2),
+            minCO2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">min</span>(CO2), maxCO2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">max</span>(CO2), sdCO2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">sd</span>(CO2),
+            meanLNCO2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">mean</span>(LNCO2), medianLNCO2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">median</span>(LNCO2), modeLNCO2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">mode</span>(LNCO2),
+            minLNCO2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">min</span>(LNCO2), maxLNCO2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">max</span>(LNCO2), sdLNCO2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">sd</span>(LNCO2))
+
+summ_dataset_CO2_abs
+
+summ_dataset_CO2_country <span style="color:#f92672">&lt;-</span> dataset_CO2 <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">group_by</span>(Country) <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">summarise</span>(meanCO2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">mean</span>(CO2_Perc_Change), medianCO2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">median</span>(CO2_Perc_Change), modeCO2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">mode</span>(CO2_Perc_Change),
+            minCO2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">min</span>(CO2_Perc_Change), maxCO2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">max</span>(CO2_Perc_Change), sdCO2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">sd</span>(CO2_Perc_Change),
+            meanSeats <span style="color:#f92672">=</span> <span style="color:#a6e22e">mean</span>(Perc_Greens), medianSeats <span style="color:#f92672">=</span> <span style="color:#a6e22e">median</span>(Perc_Greens), modeSeats <span style="color:#f92672">=</span> <span style="color:#a6e22e">mode</span>(Perc_Greens),
+            minSeats <span style="color:#f92672">=</span> <span style="color:#a6e22e">min</span>(Perc_Greens), maxSeats <span style="color:#f92672">=</span> <span style="color:#a6e22e">max</span>(Perc_Greens), sdSeats <span style="color:#f92672">=</span> <span style="color:#a6e22e">sd</span>(Perc_Greens),
+            meanGDPPC <span style="color:#f92672">=</span> <span style="color:#a6e22e">mean</span>(GDPPC), medianGDPPC <span style="color:#f92672">=</span> <span style="color:#a6e22e">median</span>(GDPPC), modeGDPPC <span style="color:#f92672">=</span> <span style="color:#a6e22e">mode</span>(GDPPC),
+            minGDPPC <span style="color:#f92672">=</span> <span style="color:#a6e22e">min</span>(GDPPC), maxGDPPC <span style="color:#f92672">=</span> <span style="color:#a6e22e">max</span>(GDPPC), sdGDPPC <span style="color:#f92672">=</span> <span style="color:#a6e22e">sd</span>(GDPPC)) <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">ungroup</span>()
+
+summ_dataset_CO2_country
+</code></pre></div><p>CO2 histogram</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">
+<span style="color:#a6e22e">ggplot</span>(dataset_CO2_abs, <span style="color:#a6e22e">aes</span>(x <span style="color:#f92672">=</span> CO2)) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">geom_histogram</span>() <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">labs</span>(x <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Absolute Value of CO2 Emissions&#34;</span>,
+  y <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Count&#34;</span>,
+  title <span style="color:#f92672">=</span> <span style="color:#66d9ef">NULL</span>)
+
+<span style="color:#75715e">#ggsave(&#34;Hist_CO2.png&#34;, width = 8, height = 5)</span>
+
+
+<span style="color:#a6e22e">ggplot</span>(dataset_CO2_abs, <span style="color:#a6e22e">aes</span>(x <span style="color:#f92672">=</span> LNCO2)) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">geom_histogram</span>() <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">labs</span>(x <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Natural Log of CO2 Emissions&#34;</span>,
+  y <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Count&#34;</span>,
+  title <span style="color:#f92672">=</span> <span style="color:#66d9ef">NULL</span>)
+
+<span style="color:#75715e">#ggsave(&#34;Hist_LNCO2.png&#34;, width = 8, height = 5)</span>
+
+</code></pre></div><p>Predict EPI from GDP</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">
+pred_GDP <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">ggpredict</span>(lm_EPI, terms <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Avg_GDPPC&#34;</span>)
+
+<span style="color:#a6e22e">plot</span>(pred_GDP) <span style="color:#f92672">+</span>
+  <span style="color:#a6e22e">labs</span>(x <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;GDP&#34;</span>,
+  y <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Predicted Change in EPI&#34;</span>,
+  title <span style="color:#f92672">=</span> <span style="color:#66d9ef">NULL</span>)
+
+
+</code></pre></div><pre><code class="language-{r" data-lang="{r">
+lm_EPI2 &lt;- lm(EPI.change ~ avg_seats_perc + sum_gov + Avg_GDPPC, data = dataset_EPI)
+
+htmlreg(lm_EPI2, single.row = FALSE, custom.model.names = &quot;EPI 10 Year Change&quot;, custom.coef.names = c(&quot;Intercept&quot;, &quot;Average Percentage of Green MPs in Parliament&quot;, &quot;Number of Years in Cabinet&quot;, &quot;Average GDP Per Capita&quot;), digits = 4)
+
+
+</code></pre><pre><code class="language-{r" data-lang="{r">
+ggplot(lm_EPI, aes(.fitted, .resid)) +
+  geom_point() +
+  geom_hline(yintercept = 0) +
+  geom_smooth(se = FALSE) +
+  labs(x = &quot;Fitted Values&quot;, y = &quot;Residuals&quot;)
+
+</code></pre><pre><code class="language-{r" data-lang="{r">
+ggplot(lm_EPI2, aes(.fitted, .resid)) +
+  geom_point() +
+  geom_hline(yintercept = 0) +
+  geom_smooth(se = FALSE) +
+  labs(x = &quot;Fitted Values&quot;, y = &quot;Residuals&quot;)
+
+</code></pre><pre><code class="language-{r" data-lang="{r">
+#ggplot(lm_EPI3, aes(.fitted, .resid)) +
+#  geom_point() +
+#  geom_hline(yintercept = 0) +
+#  geom_smooth(se = FALSE) +
+#  labs(x = &quot;Fitted Values&quot;, y = &quot;Residuals&quot;)
+
+</code></pre><pre><code class="language-{r" data-lang="{r">
+ggplot(lm_CDO, aes(.fitted, .resid)) +
+  geom_point() +
+  geom_hline(yintercept = 0) +
+  geom_smooth(se = FALSE) +
+  labs(x = &quot;Fitted Values&quot;, y = &quot;Residuals&quot;)
+
+</code></pre><pre><code class="language-{r" data-lang="{r">
+ggplot(lm_CO2, aes(.fitted, .resid)) +
+  geom_point() +
+  geom_hline(yintercept = 0) +
+  geom_smooth(se = FALSE) +
+  labs(x = &quot;Fitted Values&quot;, y = &quot;Residuals&quot;)
+
+</code></pre><ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://example.com" >
+    &copy;  Tomas Maher 2021 
+  </a>
+    <div>
+
+
+
+
+
+
+
+<a href="https://linkedin.com/in/tomasmaher" target="_blank" class="link-transition linkedin link dib z-999 pt3 pt0-l mr1" title="LinkedIn link" rel="noopener" aria-label="follow on LinkedIn——Opens in a new window">
+  <svg  height="32px"  style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000" width="8px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+</span></a>
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

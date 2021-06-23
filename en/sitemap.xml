@@ -2,96 +2,96 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://example.com/post/project_3_thesis/</loc>
+    <loc>https://tomasmaher.github.io/post/project_3_thesis/</loc>
     <lastmod>2021-06-17T10:58:08-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://example.com/</loc>
+    <loc>https://tomasmaher.github.io/</loc>
     <lastmod>2021-06-17T10:58:08-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://example.com/fr/"
+                href="https://tomasmaher.github.io/fr/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://example.com/"
+                href="https://tomasmaher.github.io/"
                 />
   </url><url>
-    <loc>https://example.com/post/project_2_nato_speeches-presentation/</loc>
+    <loc>https://tomasmaher.github.io/post/project_2_nato_speeches-presentation/</loc>
     <lastmod>2021-05-30T10:58:08-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://example.com/post/project_2_nato_speeches-code/</loc>
+    <loc>https://tomasmaher.github.io/post/project_2_nato_speeches-code/</loc>
     <lastmod>2021-05-30T10:58:08-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://example.com/post/project_1_regression-code/</loc>
+    <loc>https://tomasmaher.github.io/post/project_1_regression-code/</loc>
     <lastmod>2020-12-23T10:58:08-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://example.com/post/</loc>
+    <loc>https://tomasmaher.github.io/post/</loc>
     <lastmod>2017-03-02T12:00:00-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://example.com/fr/post/"
+                href="https://tomasmaher.github.io/fr/post/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://example.com/post/"
+                href="https://tomasmaher.github.io/post/"
                 />
   </url><url>
-    <loc>https://example.com/about/</loc>
+    <loc>https://tomasmaher.github.io/about/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://example.com/fr/about/"
+                href="https://tomasmaher.github.io/fr/about/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://example.com/about/"
+                href="https://tomasmaher.github.io/about/"
                 />
   </url><url>
-    <loc>https://example.com/categories/</loc>
+    <loc>https://tomasmaher.github.io/categories/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://example.com/fr/categories/"
+                href="https://tomasmaher.github.io/fr/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://example.com/categories/"
+                href="https://tomasmaher.github.io/categories/"
                 />
   </url><url>
-    <loc>https://example.com/tags/</loc>
+    <loc>https://tomasmaher.github.io/tags/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://example.com/fr/tags/"
+                href="https://tomasmaher.github.io/fr/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://example.com/tags/"
+                href="https://tomasmaher.github.io/tags/"
                 />
   </url>
 </urlset>
